@@ -1,6 +1,6 @@
 namespace :quilted do
 
-  task :init, [:project_name, :drush_makefile] => [:mktmp, "tmp/.gitignore", "tmp/drushrc.php"] do |t, args|
+  task :init, [:project_name, :drush_makefile, :gitignore] => [:mktmp, "tmp/drushrc.php"] do |t, args|
     desc "Setup default Quilted dgb file structure for Drupal projects."
 
     puts "Setting up file structure."
@@ -13,6 +13,20 @@ namespace :quilted do
       system %{ cd .. }
     else
       system %{ drush make --prepare-install #{ args.drush_makefile } #{ dir }/www }
+    end
+    
+    puts "Setting up .gitignore"
+    if args.gitignore
+      cp args.gitignore, 'tmp/.gitignore'
+    else
+      open("tmp/.gitignore", "w") do |file|
+        file.puts "
+  www/sites/default/settings.php
+  www/sites/default/files/css/*
+  .DS_STORE
+  *.swp
+  *.swo"
+      end
     end
     
     puts "Setting up drushrc.php symlink."
@@ -31,17 +45,6 @@ namespace :quilted do
 
   task :mktmp do |t|
       mkdir_p "tmp/databases"
-  end
-
-  file "tmp/.gitignore"                        => "tmp" do
-    open("tmp/.gitignore", "w") do |file|
-      file.puts "
-www/sites/default/settings.php
-www/sites/default/files/css/*
-.DS_STORE
-*.swp
-*.swo"
-    end
   end
 
   file "tmp/drushrc.php"                       => "tmp" do
