@@ -1,0 +1,19 @@
+core = 6.x
+api = 2
+projects[drupal][type] = core
+
+projects[admin_menu][version] = 3.0-alpha4
+projects[] = cck
+projects[] = content_profile
+projects[] = ctools
+projects[] = date
+projects[] = devel
+projects[] = jquery_ui
+projects[] = link
+projects[] = logintoboggan
+projects[] = nodereferrer
+projects[] = panels
+projects[] = seven
+projects[] = views
+projects[] = views_bulk_operations
+projects[] = zen

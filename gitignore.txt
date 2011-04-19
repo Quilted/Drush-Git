@@ -1,0 +1,11 @@
+log/
+www/sites/default/settings.php
+www/sites/default/files/css/
+www/sites/default/files/js/
+www/sites/default/ctools/
+www/sites/default/files/ctools/
+.DS_STORE
+*.swp
+*.swo
+www/backup
+www/sites/default/files/tmp/
