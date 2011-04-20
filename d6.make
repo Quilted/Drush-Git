@@ -17,3 +17,5 @@ projects[] = seven
 projects[] = views
 projects[] = views_bulk_operations
 projects[] = zen
+projects[] = strongarm
+projects[] = features
