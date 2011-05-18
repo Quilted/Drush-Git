@@ -18,3 +18,6 @@ projects[] = zen
 projects[] = panels
 projects[] = features
 projects[] = ctools
+projects[] = strongarm
+projects[] = views_bulk_operations
+projects[] = diff
