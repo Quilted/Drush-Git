@@ -23,3 +23,4 @@ projects[] = views_bulk_operations
 projects[] = diff
 projects[] = pathauto
 projects[] = token
+projects[] = entity
