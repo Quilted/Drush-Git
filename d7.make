@@ -25,7 +25,7 @@ api = 2
   
 ; Drupal 7.x. Requires the `core` property to be set to 7.x.
 projects[drupal][version] = 7
-projects[drupal][download][type] = "git"
+;projects[drupal][download][type] = "git"
 
 
 ; Modules
