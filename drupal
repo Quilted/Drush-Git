@@ -2,6 +2,7 @@
 
 require 'rubygems'
 require 'commander/import'
+require 'fileutils'
 
 program :version, '0.0.1'
 program :description, 'Setup an initial drupal setup'
@@ -14,15 +15,47 @@ command :setup do |c|
     if args[0].nil?
       puts "Please specify a project name."
     else
-      create_file_structure(args[0])      
+      PROJECT_NAME = args[0]
+      SOURCE_PATH = File.expand_path(File.dirname(__FILE__))
+      create_file_structure
+      create_drushrc
+      create_gitignore
+      # install_drupal
+      # create_drushrc_symlink
+      setup_git
     end
   end
 end
 
-def create_file_structure(project_name)
-  puts 'create_file_structure'
-  
-  dir = Dir.pwd
-  Dir.mkdir "tmp"
-  Dir.mkdir "tmp/databases"
+def create_file_structure
+  puts 'Setting up file structure...'
+  FileUtils.mkdir_p "#{ PROJECT_NAME }/databases"
 end
+
+def create_drushrc
+  puts "Setting up drushrc.php..."
+  FileUtils.cp "#{ SOURCE_PATH }/dgb/example-dgb.drushrc.php", "#{ PROJECT_NAME }/drushrc.php"
+end
+
+def install_drupal
+  puts "Installing Drupal..."
+  system %{ drush make --prepare-install #{ SOURCE_PATH }/d7.make #{ PROJECT_NAME }/www }
+end
+
+def create_gitignore
+  puts "Setting up .gitignore..."
+  FileUtils.cp "#{ SOURCE_PATH }/gitignore.txt", "#{ PROJECT_NAME }/.gitignore"
+end
+
+def create_drushrc_symlink
+  puts  "Create drushrc.php symlink..."
+  File.symlink("#{ PROJECT_NAME }/drushrc.php", "#{ PROJECT_NAME }/www/drushrc.php")
+end
+
+def setup_git
+  puts "Setting up git repo..."
+  FileUtils.cd PROJECT_NAME
+  system %{ git init; git add -A; git commit -m "Initial commit" }
+  FileUtils.cd ".."
+end
+
