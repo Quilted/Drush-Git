@@ -25,67 +25,57 @@ api = 2
   
 ; Drupal 7.x. Requires the `core` property to be set to 7.x.
 projects[drupal][version] = 7
-;projects[drupal][download][type] = "git"
 
 
-; Modules
+; Modules: Development
 ; --------
-projects[devel][type] = "module"
 projects[devel][subdir] = "contrib"
-;projects[devel][download][type] = "git"
-
-projects[features][type] = "module"
-projects[features][subdir] = "contrib"
-;projects[features][download][type] = "git"
-
-projects[jquery_ui][type] = "module"
-projects[jquery_ui][subdir] = "contrib"
-;projects[jquery_ui][download][type] = "git"
-
-projects[views][type] = "module"
-projects[views][subdir] = "contrib"
-;projects[views][download][type] = "git"
-
-projects[panels][type] = "module"
-projects[panels][subdir] = "contrib"
-;projects[panels][download][type] = "git"
-
-projects[ctools][type] = "module"
-projects[ctools][subdir] = "contrib"
-;projects[ctools][download][type] = "git"
-  
-projects[strongarm][type] = "module"
-projects[strongarm][subdir] = "contrib"
-;projects[strongarm][download][type] = "git"
-  
-projects[views_bulk_operations][type] = "module"
-projects[views_bulk_operations][subdir] = "contrib"
-;projects[views_bulk_operations][download][type] = "git"
-  
-projects[diff][type] = "module"
 projects[diff][subdir] = "contrib"
-;projects[diff][download][type] = "git"
-  
-projects[pathauto][type] = "module"
-projects[pathauto][subdir] = "contrib"
-;projects[pathauto][download][type] = "git"
-  
-projects[token][type] = "module"
-projects[token][subdir] = "contrib"
-;projects[token][download][type] = "git"
+;projects[coder][subdir] = "contrib"
+;projects[simpletest][subdir] = "contrib"
 
-projects[entity][type] = "module"
+
+; Modules: Helpers
+; --------
+projects[date][subdir] = "contrib"
+projects[ctools][subdir] = "contrib"
+projects[token][subdir] = "contrib"
 projects[entity][subdir] = "contrib"
-;projects[entity][download][type] = "git"
+projects[strongarm][subdir] = "contrib"
+projects[features][subdir] = "contrib"
+projects[advanced_help][subdir] = "contrib"
+
+
+; Modules: Front end
+; --------
+projects[jquery_ui][subdir] = "contrib"
+projects[panels][subdir] = "contrib"
+projects[views][subdir] = "contrib"
+projects[views_bulk_operations][subdir] = "contrib"
+
+
+; Modules: SEO
+; --------
+projects[pathauto][subdir] = "contrib"
+projects[xmlsitemap][subdir] = "contrib"
+
+; Modules: WYSIWYG
+; --------
+projects[wysiwyg][subdir] = "contrib"
+projects[imce][subdir] = "contrib"
+projects[imce_wysiwyg][subdir] = "contrib"
 
 
 ; Themes
 ; --------
 projects[zen][type] = "theme"
-;projects[zen][download][type] = "git"
 
   
 ; Libraries
 ; ---------
 libraries[jqueryui][download][type] = "file"
 libraries[jqueryui][download][url] = "https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.12/jquery-ui.min.js"
+
+libraries[ckeditor][download][type] = "get"
+libraries[ckeditor][download][url] = "http://download.cksource.com/CKEditor/CKEditor/CKEditor%203.3.1/ckeditor_3.3.1.tar.gz"
+libraries[ckeditor][destination] = "libraries"
