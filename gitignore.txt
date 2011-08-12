@@ -1,11 +1,18 @@
-log/
+# Ignore settings.php
 www/sites/default/settings.php
+
+# Ignore caches and aggregated files
 www/sites/default/files/css/
 www/sites/default/files/js/
 www/sites/default/ctools/
 www/sites/default/files/ctools/
+
+# Ignore Mac files
 .DS_STORE
-*.swp
-*.swo
+
+# Ignore backups and temporary files
 www/backup
 www/sites/default/files/tmp/
+
+# Ignore logs
+log/
