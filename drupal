@@ -18,11 +18,12 @@ command :setup do |c|
       PROJECT_NAME = args[0]
       SOURCE_PATH = File.expand_path(File.dirname(__FILE__))
       create_file_structure
-      create_drushrc
-      create_gitignore
-      # install_drupal
+      # create_drushrc
+      # create_gitignore
+      download_drupal
       # create_drushrc_symlink
-      setup_git
+      install_drupal
+      # setup_git
     end
   end
 end
@@ -37,8 +38,8 @@ def create_drushrc
   FileUtils.cp "#{ SOURCE_PATH }/dgb/example-dgb.drushrc.php", "#{ PROJECT_NAME }/drushrc.php"
 end
 
-def install_drupal
-  puts "Installing Drupal..."
+def download_drupal
+  puts "Download Drupal and modules..."
   system %{ drush make --prepare-install #{ SOURCE_PATH }/d7.make #{ PROJECT_NAME }/www }
 end
 
@@ -49,7 +50,22 @@ end
 
 def create_drushrc_symlink
   puts  "Create drushrc.php symlink..."
-  File.symlink("#{ PROJECT_NAME }/drushrc.php", "#{ PROJECT_NAME }/www/drushrc.php")
+  File.symlink("../drushrc.php", "#{ PROJECT_NAME }/www/drushrc.php")
+end
+
+def install_drupal
+  puts "Install Drupal..."
+  puts "================="
+  db_user = ask "> Database user:"
+  db_password = password "> Database password:"
+  drupal_email = ask "> Drupal email:"
+  
+  si_command = "drush si --site-name=#{ PROJECT_NAME } --site-email=#{ drupal_email } --account-name=admin --account-pass=admin --account-email=#{ drupal_email } --db-url=mysql://#{ db_user }:#{ db_password }@localhost:/#{ PROJECT_NAME }"
+  
+  FileUtils.cd "#{ PROJECT_NAME }/www"
+  system %{ #{ si_command } }
+  FileUtils.cd "../.."
+  
 end
 
 def setup_git
@@ -58,4 +74,3 @@ def setup_git
   system %{ git init; git add -A; git commit -m "Initial commit" }
   FileUtils.cd ".."
 end
-
