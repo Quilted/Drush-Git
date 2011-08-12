@@ -1,0 +1,28 @@
+#!/usr/bin/env ruby
+
+require 'rubygems'
+require 'commander/import'
+
+program :version, '0.0.1'
+program :description, 'Setup an initial drupal setup'
+
+command :setup do |c|
+  c.syntax = 'drupal setup <project_name> [options]'
+  c.description = 'Creates and installs a new Drupal project.'
+  c.example 'Create a project called Superapp.', 'drupal setup "Superapp"'
+  c.action do |args, options|
+    if args[0].nil?
+      puts "Please specify a project name."
+    else
+      create_file_structure(args[0])      
+    end
+  end
+end
+
+def create_file_structure(project_name)
+  puts 'create_file_structure'
+  
+  dir = Dir.pwd
+  Dir.mkdir "tmp"
+  Dir.mkdir "tmp/databases"
+end
