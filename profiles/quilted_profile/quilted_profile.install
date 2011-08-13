@@ -316,11 +316,32 @@ function quilted_profile_install() {
   // Set default country.
   variable_set('site_default_country', 'US');
   
+  // Create new date formats.    
+  $date_formats = array(
+    array(
+      'format' => 'n/j/y - g:i',
+      'type' => 'short'
+    ),
+    array(
+      'format' => 'D, M j, Y - g:ia',
+      'type' => 'medium'
+    ),
+    array(
+      'format' => 'l, F j, Y - g:ia',
+      'type' => 'long'
+    ),
+  );  
+  $query = db_insert('date_formats')->fields(array('format', 'type'));
+  foreach ($date_formats as $record) {
+    $query->values($record);
+  }
+  $query->execute();
+    
+    
   // Set date formats.
-  // @TODO: These don't work
-  variable_set('date_format_long', 'l, F j, Y - g:ia');
+  variable_set('date_format_short', 'n/j/y - g:i');
   variable_set('date_format_medium', 'D, M j, Y - g:ia');
-  variable_set('date_format_short', 'n/j/y - g:ia');
+  variable_set('date_format_long', 'l, F j, Y - g:ia');
   
   // Set default and temporary file paths.
   variable_set('file_private_path', '../private_files');
