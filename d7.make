@@ -58,6 +58,7 @@ projects[views_bulk_operations][subdir] = "contrib"
 projects[pathauto][subdir] = "contrib"
 projects[xmlsitemap][subdir] = "contrib"
 
+
 ; Modules: WYSIWYG
 ; --------
 projects[wysiwyg][subdir] = "contrib"
