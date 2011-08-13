@@ -22,6 +22,7 @@ command :setup do |c|
       # create_gitignore
       download_drupal
       # create_drushrc_symlink
+      copy_install_profile
       install_drupal
       # setup_git
     end
@@ -53,6 +54,10 @@ def create_drushrc_symlink
   File.symlink("../drushrc.php", "#{ PROJECT_NAME }/www/drushrc.php")
 end
 
+def copy_install_profile
+  FileUtils.cp_r "#{ SOURCE_PATH }/profiles/quilted_profile", "#{ PROJECT_NAME }/www/profiles/quilted_profile"
+end
+
 def install_drupal
   puts "Install Drupal..."
   puts "================="
@@ -60,7 +65,7 @@ def install_drupal
   db_password = password "> Database password:"
   drupal_email = ask "> Drupal email:"
   
-  si_command = "drush si --site-name=#{ PROJECT_NAME } --site-email=#{ drupal_email } --account-name=admin --account-pass=admin --account-email=#{ drupal_email } --db-url=mysql://#{ db_user }:#{ db_password }@localhost:/#{ PROJECT_NAME }"
+  si_command = "drush si quilted_profile --site-name=#{ PROJECT_NAME } --site-email=#{ drupal_email } --account-name=admin --account-pass=admin --account-email=#{ drupal_email } --db-url=mysql://#{ db_user }:#{ db_password }@localhost:/#{ PROJECT_NAME }"
   
   FileUtils.cd "#{ PROJECT_NAME }/www"
   system %{ #{ si_command } }

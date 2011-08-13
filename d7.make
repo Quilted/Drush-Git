@@ -46,9 +46,8 @@ projects[features][subdir] = "contrib"
 projects[advanced_help][subdir] = "contrib"
 
 
-; Modules: Front end
+; Modules: Views and Panels
 ; --------
-projects[jquery_ui][subdir] = "contrib"
 projects[panels][subdir] = "contrib"
 projects[views][subdir] = "contrib"
 projects[views_bulk_operations][subdir] = "contrib"
@@ -73,9 +72,6 @@ projects[zen][type] = "theme"
   
 ; Libraries
 ; ---------
-libraries[jqueryui][download][type] = "file"
-libraries[jqueryui][download][url] = "https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.12/jquery-ui.min.js"
-
 libraries[ckeditor][download][type] = "get"
 libraries[ckeditor][download][url] = "http://download.cksource.com/CKEditor/CKEditor/CKEditor%203.3.1/ckeditor_3.3.1.tar.gz"
 libraries[ckeditor][destination] = "libraries"
