@@ -1,10 +1,3 @@
-Requirements
-===========
-
-* Ruby
-* Rubygems
-* Bundler (http://gembundler.com/)
-
 About
 =====
 
@@ -15,6 +8,13 @@ About
 * Creates development and production features
 * Installs Drupal based on an install profile
 * Initializes a new git repo
+
+Requirements
+===========
+
+* Ruby
+* Rubygems
+* Bundler (http://gembundler.com/)
 
 Run
 ====
