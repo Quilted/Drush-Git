@@ -1,3 +1,10 @@
+Requirements
+===========
+
+* Ruby
+* Rubygems
+* Bundler (http://gembundler.com/)
+
 About
 =====
 
@@ -29,3 +36,11 @@ Optional Flags
 * gitignore: Defaults to cached files and settings.php, but does not ignore user generated files
 * install_profile: Defaults to custom Quilted install profile
 * db_name: Defaults to project_name
+
+
+Optional Follow Up
+=================
+
+* Create a github.com repo
+* Add collaborators
+* Set remote git repo to github.com and push
