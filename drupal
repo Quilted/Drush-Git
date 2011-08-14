@@ -18,13 +18,14 @@ command :setup do |c|
       PROJECT_NAME = args[0]
       SOURCE_PATH = File.expand_path(File.dirname(__FILE__))
       create_file_structure
-      # create_drushrc
-      # create_gitignore
+      create_drushrc
+      create_gitignore
       download_drupal
-      # create_drushrc_symlink
+      create_drushrc_symlink
+      copy_features
       copy_install_profile
       install_drupal
-      # setup_git
+      setup_git
     end
   end
 end
@@ -58,6 +59,10 @@ end
 
 def copy_install_profile
   FileUtils.cp_r "#{ SOURCE_PATH }/profiles/quilted_profile", "#{ PROJECT_NAME }/www/profiles/quilted_profile"
+end
+
+def copy_features
+  FileUtils.cp_r "#{ SOURCE_PATH }/custom", "#{ PROJECT_NAME }/www/sites/all/modules/custom"
 end
 
 def install_drupal

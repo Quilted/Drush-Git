@@ -50,4 +50,6 @@ dependencies[] = wysiwyg
 dependencies[] = imce
 dependencies[] = imce_wysiwyg
 
+dependencies[] = quilted_dev
+
 files[] = quilted_profile.profile
