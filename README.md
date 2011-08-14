@@ -1,11 +1,31 @@
+About
+=====
+
+* Creates a new Drupal project 
+* Uses the dgb (see http://github.com/scor/dgb) file structure
+* Downloads Drupal core and contributed modules based on a drush makefile
+* Creates a .gitignore file
+* Creates development and production features
+* Installs Drupal based on an install profile
+* Initializes a new git repo
+
 Run
 ====
 
-    rake "quilted:init[PROJECT_NAME,PATH/TO/DRUSH_MAKEFILE_IF_YOU_HAVE_ONE,PATH/TO/GITIGNORE_IF_YOU_HAVE_ONE]"
+Run from the parent directory of the new Drupal project.
 
-No spaces after commas!
+    ruby [path/to/this/repo/]drupal setup [project_name]
 
 Example
 -------
 
-    rake "quilted:init[new_repo,drush-git/d6.make,drush-git/gitignore.txt]"
+  ruby drush-git/drupal setup new_website
+  
+
+Optional Flags
+==============
+
+* makefile: Defaults to Drupal 7 with selected contributed modules
+* gitignore: Defaults to cached files and settings.php, but does not ignore user generated files
+* install_profile: Defaults to custom Quilted install profile
+* db_name: Defaults to project_name
