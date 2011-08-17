@@ -55,7 +55,9 @@ def create_file_structure
   puts 'Setting up file structure...'
   FileUtils.mkdir_p "#{ PROJECT_NAME }/databases"
   FileUtils.mkdir_p "#{ PROJECT_NAME }/private_files"
+  FileUtils.touch "#{ PROJECT_NAME }/private_files/PLACEHOLDER.txt"
   FileUtils.mkdir_p "#{ PROJECT_NAME }/tmp_files"
+  FileUtils.touch "#{ PROJECT_NAME }/tmp_files/PLACEHOLDER.txt"
 end
 
 def create_drushrc
@@ -99,7 +101,9 @@ end
 def setup_git
   puts "Setting up git repo..."
   FileUtils.cd PROJECT_NAME
-  system %{ git init; git add -A; git commit -m "Initial commit" }
-  FileUtils.cd ".."
+  system %{ git init; git add -A; git commit -m "Initial commit." }
+  FileUtils.cd "www"
+  system %{ drush dgb-backup --m="Initial database backup." }
+  FileUtils.cd "../.."
 end
 
