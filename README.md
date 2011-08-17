@@ -49,3 +49,9 @@ Optional Follow Up
 * Create a github.com repo
 * Add collaborators
 * Set remote git repo to github.com and push
+
+
+TODO
+=================
+
+* Add more graceful endings if a requirement such as drush or git isn't available
