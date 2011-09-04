@@ -5,7 +5,7 @@ require 'bundler/setup'
 require 'commander/import'
 require 'fileutils'
 
-program :version, '0.0.1'
+program :version, '0.1'
 program :description, 'Setup an initial drupal setup'
 
 command :setup do |c|
@@ -86,7 +86,7 @@ def copy_install_profile
 end
 
 def copy_features
-  FileUtils.cp_r "#{ SOURCE_PATH }/custom", "#{ PROJECT_NAME }/www/sites/all/modules/custom"
+  FileUtils.cp_r "#{ SOURCE_PATH }/modules", "#{ PROJECT_NAME }/www/sites/default/modules"
 end
 
 def install_drupal(install_profile, db_user, db_password, drupal_email)

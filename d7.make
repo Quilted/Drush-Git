@@ -29,41 +29,41 @@ projects[drupal][version] = 7
 
 ; Modules: Development
 ; --------
-projects[devel][subdir] = "contrib"
-projects[diff][subdir] = "contrib"
-;projects[coder][subdir] = "contrib"
-;projects[simpletest][subdir] = "contrib"
+projects[devel][type] = "module"
+projects[diff][type] = "module"
+;projects[coder][type] = "module"
+;projects[simpletest][type] = "module"
 
 
 ; Modules: Helpers
 ; --------
-projects[date][subdir] = "contrib"
-projects[ctools][subdir] = "contrib"
-projects[token][subdir] = "contrib"
-projects[entity][subdir] = "contrib"
-projects[strongarm][subdir] = "contrib"
-projects[features][subdir] = "contrib"
-projects[advanced_help][subdir] = "contrib"
+projects[date][type] = "module"
+projects[ctools][type] = "module"
+projects[token][type] = "module"
+projects[entity][type] = "module"
+projects[strongarm][type] = "module"
+projects[features][type] = "module"
+projects[advanced_help][type] = "module"
 
 
 ; Modules: Views and Panels
 ; --------
-projects[panels][subdir] = "contrib"
-projects[views][subdir] = "contrib"
-projects[views_bulk_operations][subdir] = "contrib"
+projects[panels][type] = "module"
+projects[views][type] = "module"
+projects[views_bulk_operations][type] = "module"
 
 
 ; Modules: SEO
 ; --------
-projects[pathauto][subdir] = "contrib"
-projects[xmlsitemap][subdir] = "contrib"
+projects[pathauto][type] = "module"
+projects[xmlsitemap][type] = "module"
 
 
 ; Modules: WYSIWYG
 ; --------
-projects[wysiwyg][subdir] = "contrib"
-projects[imce][subdir] = "contrib"
-projects[imce_wysiwyg][subdir] = "contrib"
+projects[wysiwyg][type] = "module"
+projects[imce][type] = "module"
+projects[imce_wysiwyg][type] = "module"
 
 
 ; Themes
