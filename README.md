@@ -58,7 +58,6 @@ TODO
 * Create a Zen subtheme
 * Test zenophile for creating Zen subtheme as in https://github.com/amitaibu/zen_ninesixty/tree/7.x-1.x-dev
 * Add a directory for patches
-* Switch to using best practice of keeping custom modules in sites/default/modules and contributed modules in sites/all/modules rather than in sites/all/modules/custom and sites/all/modules/contrib, respectively
 * Add block_class as an auto install and configure
 * Add menu_attributes as an auto install and configure
 * Add masquerade as an auto install and configure
