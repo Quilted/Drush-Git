@@ -61,3 +61,4 @@ TODO
 * Add block_class as an auto install and configure
 * Add menu_attributes as an auto install and configure
 * Add masquerade as an auto install and configure
+* Update WYSIWYG initial configuration to include Paste form Word button
