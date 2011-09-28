@@ -62,3 +62,4 @@ TODO
 * Add menu_attributes as an auto install and configure
 * Add masquerade as an auto install and configure
 * Update WYSIWYG initial configuration to include Paste form Word button
+* Create initial general feature (e.g. includes all permissions and default strongarm variables)
