@@ -63,3 +63,4 @@ TODO
 * Add masquerade as an auto install and configure
 * Update WYSIWYG initial configuration to include Paste form Word button
 * Create initial general feature (e.g. includes all permissions and default strongarm variables)
+* Pull out PHP primary menu snippet: https://github.com/Quilted/beyondcoal/commit/b2fb51abf45a63aac467a896dfacb6c33532d7a7#commitcomment-623174
