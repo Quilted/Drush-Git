@@ -58,6 +58,7 @@ TODO
 * Create a Zen subtheme
 * Test zenophile for creating Zen subtheme as in https://github.com/amitaibu/zen_ninesixty/tree/7.x-1.x-dev
 * Add a directory for patches
+* Auto-patch standard patches (see Basecamp Writeboard)
 * Add block_class as an auto install and configure
 * Add menu_attributes as an auto install and configure
 * Add masquerade as an auto install and configure
@@ -66,3 +67,12 @@ TODO
 * Pull out PHP primary menu snippet: https://github.com/Quilted/beyondcoal/commit/b2fb51abf45a63aac467a896dfacb6c33532d7a7#commitcomment-623174
 * Add title as an auto install and configure for D7
 * Add h2-h4, p, br and other basic tags to filtered html text format
+* Make sure entity tokens is turned off by default
+* Add hyphenation to CSS
+<pre>
+  p {
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    hyphens: auto;
+}
+</pre>
