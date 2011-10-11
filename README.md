@@ -53,6 +53,14 @@ Optional Follow Up
 * Set remote git repo to github.com and push
 
 
+Zen Sub-Theme
+=================
+
+* Moves all zen CSS and image files into their own directory
+* Removes main menu from page.tpl.php
+* Adds general.css file
+
+
 TODO
 =================
 
