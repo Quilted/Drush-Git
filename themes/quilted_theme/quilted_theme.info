@@ -47,6 +47,7 @@ stylesheets[all][]        = css/zen/comments.css
 stylesheets[all][]        = css/zen/forms.css
 stylesheets[all][]        = css/zen/fields.css
 stylesheets[print][]      = css/zen/print.css
+stylesheets[all][]      = css/general.css
 
 ; Example of adding handheld stylesheets. The iPhone's preferred media type
 ; is based on the CSS3 Media queries. http://www.w3.org/TR/css3-mediaqueries/
