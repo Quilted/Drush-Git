@@ -55,11 +55,10 @@ TODO
 =================
 
 * Add more graceful endings if a requirement such as drush or git isn't available
-* Create a Zen subtheme
-* Test zenophile for creating Zen subtheme as in https://github.com/amitaibu/zen_ninesixty/tree/7.x-1.x-dev
 
-* Create initial general feature (e.g. includes all permissions and default strongarm variables)
+* Create a Zen subtheme
 * Pull out PHP primary menu snippet: https://github.com/Quilted/beyondcoal/commit/b2fb51abf45a63aac467a896dfacb6c33532d7a7#commitcomment-623174
+* Test zenophile for creating Zen subtheme as in https://github.com/amitaibu/zen_ninesixty/tree/7.x-1.x-dev
 * Add hyphenation to CSS
 <pre>
   p {
