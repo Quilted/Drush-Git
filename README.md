@@ -59,10 +59,10 @@ TODO
 * Test zenophile for creating Zen subtheme as in https://github.com/amitaibu/zen_ninesixty/tree/7.x-1.x-dev
 * Add a directory for patches
 * Auto-patch standard patches (see Basecamp Writeboard)
-* Update WYSIWYG initial configuration to include Paste form Word button
+* Update WYSIWYG initial configuration to include Paste from Word button
 * Create initial general feature (e.g. includes all permissions and default strongarm variables)
 * Pull out PHP primary menu snippet: https://github.com/Quilted/beyondcoal/commit/b2fb51abf45a63aac467a896dfacb6c33532d7a7#commitcomment-623174
-* Add h2-h4, p, br and other basic tags to filtered html text format
+* Setup basic shortcut menu for admins
 * Add hyphenation to CSS
 <pre>
   p {
