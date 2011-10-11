@@ -26,7 +26,7 @@ Run
 
 Run from the parent directory of the new Drupal project.
 
-    ruby [path/to/this/repo/]drupal setup [project_name]
+    ruby [path/to/this/repo/]/drupal setup [project_name]
 
 Example
 -------
