@@ -6,7 +6,9 @@ About
 * Downloads Drupal core and contributed modules based on a drush makefile
 * Creates a .gitignore file
 * Creates development and production features
+* Creates an initial Quilted subtheme
 * Installs Drupal based on an install profile
+* Creates general feature with all permissions and basic variables included
 * Initializes a new git repo
 
 Requirements
