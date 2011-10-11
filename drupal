@@ -45,6 +45,7 @@ command :setup do |c|
       create_drushrc_symlink
       copy_features
       copy_install_profile
+      copy_subtheme
       install_drupal options.install_profile, db_user, db_password, drupal_email
       create_general_feature
       setup_git
@@ -88,6 +89,11 @@ end
 
 def copy_features
   FileUtils.cp_r "#{ SOURCE_PATH }/modules", "#{ PROJECT_NAME }/www/sites/default/modules"
+end
+
+def copy_subtheme
+  puts "Create Zen subtheme..."
+  FileUtils.cp_r "#{ SOURCE_PATH }/themes/", "#{ PROJECT_NAME }/www/sites/default/themes"
 end
 
 def install_drupal(install_profile, db_user, db_password, drupal_email)

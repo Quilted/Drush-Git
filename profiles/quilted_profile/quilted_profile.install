@@ -315,7 +315,17 @@ function quilted_profile_install() {
     ->condition('type', 'theme')
     ->condition('name', 'zen')
     ->execute();
-    
+
+  // Enable quilted theme.
+  db_update('system')
+    ->fields(array('status' => 1))
+    ->condition('type', 'theme')
+    ->condition('name', 'quilted_theme')
+    ->execute();
+
+  // Set quilted theme to default.
+  variable_set('theme_default', 'quilted_theme');
+
   // Set default country.
   variable_set('site_default_country', 'US');
   
