@@ -356,5 +356,55 @@ function quilted_profile_install() {
     ->execute();
     
   
+  // Create an initial default shortcut set.
+  $shortcut_set = new stdClass();
+  $shortcut_set->title = st('Custom');
+  $shortcut_set->links = array(
+    array(
+      'link_path' => 'node/add',
+      'link_title' => st('Add content'),
+      'weight' => -20,
+    ),
+    array(
+      'link_path' => 'admin/content',
+      'link_title' => st('Find content'),
+      'weight' => -19,
+    ),
+    array(
+      'link_path' => 'admin/structure/features',
+      'link_title' => st('Features'),
+      'weight' => -18,
+    ),
+    array(
+      'link_path' => 'admin/structure/menu/manage/main-menu',
+      'link_title' => st('Main menu'),
+      'weight' => -17,
+    ),
+    array(
+      'link_path' => 'admin/structure/pages',
+      'link_title' => st('Panel pages'),
+      'weight' => -16,
+    ),
+    array(
+      'link_path' => 'admin/structure/views',
+      'link_title' => st('Views'),
+      'weight' => -15,
+    ),
+    array(
+      'link_path' => 'admin/structure/ctools-content',
+      'link_title' => st('Custom content panes'),
+      'weight' => -14,
+    ),
+  );
+  // If Drupal is being installed, rebuild the menu before saving the shortcut
+  // set, to make sure the links defined above can be correctly saved. (During
+  // installation, the menu might not have been built at all yet, or it might
+  // have been built but without the node module's links in it.)
+  if (drupal_installation_attempted()) {
+    menu_rebuild();
+  }
+  shortcut_set_save($shortcut_set);
+  // Assign this set to the user 1.
+  shortcut_set_assign_user($shortcut_set, user_load(1));
   
 }
