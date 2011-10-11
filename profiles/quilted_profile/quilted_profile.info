@@ -24,12 +24,17 @@ dependencies[] = rdf
 
 dependencies[] = devel
 dependencies[] = diff
+dependencies[] = coder
+dependencies[] = block_class
+dependencies[] = menu_attributes
+dependencies[] = masquerade
 
 dependencies[] = panels
 dependencies[] = views
 dependencies[] = views_ui
 dependencies[] = views_bulk_operations
 
+dependencies[] = title
 dependencies[] = date
 dependencies[] = date_popup
 dependencies[] = date_views

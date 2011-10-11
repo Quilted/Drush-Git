@@ -31,8 +31,10 @@ projects[drupal][version] = 7
 ; --------
 projects[devel][type] = "module"
 projects[diff][type] = "module"
-;projects[coder][type] = "module"
-;projects[simpletest][type] = "module"
+projects[coder][type] = "module"
+projects[block_class][type] = "module"
+projects[menu_attributes][type] = "module"
+projects[masquerade][type] = "module"
 
 
 ; Modules: Helpers
@@ -64,6 +66,7 @@ projects[xmlsitemap][type] = "module"
 projects[wysiwyg][type] = "module"
 projects[imce][type] = "module"
 projects[imce_wysiwyg][type] = "module"
+projects[title][type] = "module"
 
 
 ; Themes
