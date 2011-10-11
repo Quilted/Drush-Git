@@ -51,6 +51,7 @@ projects[advanced_help][type] = "module"
 ; Modules: Views and Panels
 ; --------
 projects[panels][type] = "module"
+projects[panels][patch][] = "http://drupal.org/files/issues/panels_custom_content_pane_css_class.patch"
 projects[views][type] = "module"
 projects[views_bulk_operations][type] = "module"
 
