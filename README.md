@@ -62,9 +62,7 @@ TODO
 * Update WYSIWYG initial configuration to include Paste form Word button
 * Create initial general feature (e.g. includes all permissions and default strongarm variables)
 * Pull out PHP primary menu snippet: https://github.com/Quilted/beyondcoal/commit/b2fb51abf45a63aac467a896dfacb6c33532d7a7#commitcomment-623174
-* Add title as an auto install and configure for D7
 * Add h2-h4, p, br and other basic tags to filtered html text format
-* Make sure entity tokens is turned off by default
 * Add hyphenation to CSS
 <pre>
   p {

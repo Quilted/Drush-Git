@@ -25,7 +25,6 @@ dependencies[] = rdf
 dependencies[] = devel
 dependencies[] = diff
 dependencies[] = coder
-dependencies[] = block_class
 dependencies[] = menu_attributes
 dependencies[] = masquerade
 
