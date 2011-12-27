@@ -46,6 +46,7 @@ projects[entity][type] = "module"
 projects[strongarm][type] = "module"
 projects[features][type] = "module"
 projects[advanced_help][type] = "module"
+projects[navigation404][type] = "module"
 
 
 ; Modules: Views and Panels

@@ -49,6 +49,7 @@ dependencies[] = views_content
 
 dependencies[] = pathauto
 dependencies[] = xmlsitemap
+dependencies[] = navigation404
 
 dependencies[] = wysiwyg
 dependencies[] = imce
