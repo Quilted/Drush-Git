@@ -22,12 +22,6 @@ dependencies[] = field_ui
 dependencies[] = file
 dependencies[] = rdf
 
-dependencies[] = devel
-dependencies[] = diff
-dependencies[] = coder
-dependencies[] = menu_attributes
-dependencies[] = masquerade
-
 dependencies[] = panels
 dependencies[] = views
 dependencies[] = views_ui
