@@ -18,7 +18,7 @@ Requirements
 * Git
 * [Rubygems](http://rubygems.org/pages/download)
 * [Bundler](http://gembundler.com/)
-* [Drush](http://drupal.org/project/drush)
+* [Drush 5](http://drupal.org/project/drush)
 * [Drush Make](http://drupal.org/project/drush_make)
 * [Drush DGB](github.com/scor/dgb)
 
