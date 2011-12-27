@@ -51,6 +51,7 @@ Optional Follow Up
 * Create a github.com repo
 * Add collaborators
 * Set remote git repo to github.com and push
+* Set up [Masquerade](http://drupal.org/project/masquerade) user and move Masquerade links from Navigation menu to Management menu
 
 
 Zen Sub-Theme
