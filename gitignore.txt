@@ -1,11 +1,8 @@
 # Ignore settings.php
 www/sites/default/settings.php
 
-# Ignore caches and aggregated files
-www/sites/default/files/css/
-www/sites/default/files/js/
-www/sites/default/ctools/
-www/sites/default/files/ctools/
+# Ignore files
+www/sites/default/files/
 
 # Ignore Mac files
 .DS_STORE
