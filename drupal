@@ -111,15 +111,17 @@ def create_general_feature
 
   FileUtils.cd "#{ PROJECT_NAME }/www"
   system %{ #{ si_command } }
+  system %{ drush en quilted_general -y }
   FileUtils.cd "../.."
 end
 
 def setup_git
   puts "Setting up git repo..."
   FileUtils.cd PROJECT_NAME
-  system %{ git init; git add -A; git commit -m "Initial commit." }
+  system %{ git init; git add -A; git commit --quiet -m "Initial commit." }
   FileUtils.cd "www"
   system %{ drush dgb-backup --m="Initial database backup." }
   FileUtils.cd "../.."
+  puts "Finished setting up git."
 end
 
