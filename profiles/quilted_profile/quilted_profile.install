@@ -10,6 +10,15 @@ function quilted_profile_install() {
   // standard_install();
 
   // Add text formats.
+  $full_html_no_filters_format = array(
+    'format' => 'full_html_no_filters',
+    'name' => 'Full HTML with no filters',
+    'weight' => -1,
+    'filters' => array(),
+  );
+  $full_html_no_filters_format = (object) $full_html_no_filters_format;
+  filter_format_save($full_html_no_filters_format);
+      
   $filtered_html_format = array(
     'format' => 'filtered_html',
     'name' => 'Filtered HTML',
@@ -346,6 +355,9 @@ function quilted_profile_install() {
   variable_set('date_format_short', 'n/j/y - g:i');
   variable_set('date_format_medium', 'D, M j, Y - g:ia');
   variable_set('date_format_long', 'l, F j, Y - g:ia');
+  
+  // Set first day of the week.
+  variable_set('date_first_day', '0');
   
   // Set default and temporary file paths.
   variable_set('file_private_path', '../private_files');
