@@ -206,20 +206,6 @@ function quilted_profile_install() {
         'rdftype' => array('foaf:Document'),
       ),
     ),
-    array(
-      'type' => 'node',
-      'bundle' => 'article',
-      'mapping' => array(
-        'field_image' => array(
-          'predicates' => array('og:image', 'rdfs:seeAlso'),
-          'type' => 'rel',
-        ),
-        'field_tags' => array(
-          'predicates' => array('dc:subject'),
-          'type' => 'rel',
-        ),
-      ),
-    ),
   );
   foreach ($rdf_mappings as $rdf_mapping) {
     rdf_mapping_save($rdf_mapping);
@@ -235,8 +221,8 @@ function quilted_profile_install() {
   // Only administrators can create user accounts.
   variable_set('user_register', USER_REGISTER_ADMINISTRATORS_ONLY);
 
-  // Create a default vocabulary named "Tags", enabled for the 'article' content type.
-  $description = st('Use tags to group articles on similar topics into categories.');
+  // Create a default vocabulary named "Tags".
+  $description = st('Use tags to group similar topics into categories.');
   $help = st('Enter a comma-separated list of words to describe your content.');
   $vocabulary = (object) array(
     'name' => st('Tags'),
@@ -267,7 +253,7 @@ function quilted_profile_install() {
     'field_name' => 'field_' . $vocabulary->machine_name,
     'entity_type' => 'node',
     'label' => 'Tags',
-    'bundle' => 'article',
+    'bundle' => 'page',
     'description' => $vocabulary->help,
     'widget' => array(
       'type' => 'taxonomy_autocomplete',
