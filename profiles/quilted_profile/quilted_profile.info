@@ -46,8 +46,9 @@ dependencies[] = xmlsitemap
 dependencies[] = navigation404
 
 dependencies[] = wysiwyg
-dependencies[] = imce
-dependencies[] = imce_wysiwyg
+dependencies[] = media
+dependencies[] = media_internet
+dependencies[] = file_entity
 
 dependencies[] = quilted_dev
 

@@ -66,8 +66,7 @@ projects[xmlsitemap][type] = "module"
 ; Modules: WYSIWYG
 ; --------
 projects[wysiwyg][type] = "module"
-projects[imce][type] = "module"
-projects[imce_wysiwyg][type] = "module"
+projects[media][type] = "module"
 projects[title][type] = "module"
 
 
