@@ -65,9 +65,13 @@ projects[xmlsitemap][type] = "module"
 
 ; Modules: WYSIWYG
 ; --------
+projects[title][type] = "module"
 projects[wysiwyg][type] = "module"
 projects[media][type] = "module"
-projects[title][type] = "module"
+projects[media_youtube][type] = "module"
+projects[media_vimeo][type] = "module"
+projects[media_soundcloud][type] = "module"
+projects[media_flickr][type] = "module"
 
 
 ; Themes
