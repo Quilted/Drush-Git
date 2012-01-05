@@ -18,10 +18,17 @@ Requirements
 * Git
 * [Rubygems](http://rubygems.org/pages/download)
 * [Bundler](http://gembundler.com/)
-* [Drush 5](http://drupal.org/project/drush)
-* [Drush Make](http://drupal.org/project/drush_make)
+* [Drush 5 (latest version!)](http://drupal.org/project/drush)
 * [Drush DGB](github.com/scor/dgb)
 
+
+Installation
+============
+
+After cloning this git repository, be sure to run from inside the drush-git repo:
+
+    git submodule init
+    git submodule update
 
 Run
 ====
@@ -29,6 +36,10 @@ Run
 Run from the parent directory of the new Drupal project.
 
     ruby [path/to/this/repo/]/drupal setup [project_name]
+    
+Run with sudo if you are encountering gem or drush download errors:
+
+    sudo ruby [path/to/this/repo/]/drupal setup [project_name]
 
 Example
 -------
