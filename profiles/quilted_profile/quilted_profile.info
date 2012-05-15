@@ -52,7 +52,6 @@ dependencies[] = file_entity
 dependencies[] = media_youtube
 dependencies[] = media_vimeo
 dependencies[] = media_soundcloud
-dependencies[] = media_flickr
 
 dependencies[] = quilted_dev
 
