@@ -47,6 +47,7 @@ projects[strongarm][type] = "module"
 projects[features][type] = "module"
 projects[advanced_help][type] = "module"
 projects[navigation404][type] = "module"
+projects[backup_migrate][type] = "module"
 
 
 ; Modules: Views and Panels
@@ -55,6 +56,7 @@ projects[panels][type] = "module"
 projects[panels][patch][] = "http://drupal.org/files/issues/panels_custom_content_pane_css_class.patch"
 projects[views][type] = "module"
 projects[views_bulk_operations][type] = "module"
+projects[context][type] = "module"
 
 
 ; Modules: SEO
@@ -69,13 +71,14 @@ projects[title][type] = "module"
 projects[wysiwyg][type] = "module"
 projects[media][type] = "module"
 projects[media_youtube][type] = "module"
-projects[media_vimeo][type] = "module"
 projects[media_soundcloud][type] = "module"
 
 
 ; Themes
 ; --------
-projects[zen][type] = "theme"
+projects[omega][type] = "theme"
+projects[omega_tools][type] = "module"
+projects[delta][type] = "module"
 
   
 ; Libraries

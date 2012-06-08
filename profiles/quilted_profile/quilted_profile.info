@@ -26,6 +26,7 @@ dependencies[] = panels
 dependencies[] = views
 dependencies[] = views_ui
 dependencies[] = views_bulk_operations
+dependencies[] = context
 
 dependencies[] = title
 dependencies[] = date
@@ -40,6 +41,7 @@ dependencies[] = strongarm
 dependencies[] = features
 dependencies[] = advanced_help
 dependencies[] = views_content
+dependencies[] = backup_migrate
 
 dependencies[] = pathauto
 dependencies[] = xmlsitemap
@@ -50,8 +52,10 @@ dependencies[] = media
 dependencies[] = media_internet
 dependencies[] = file_entity
 dependencies[] = media_youtube
-dependencies[] = media_vimeo
 dependencies[] = media_soundcloud
+
+dependencies[] = omega_tools
+dependencies[] = delta
 
 dependencies[] = quilted_dev
 

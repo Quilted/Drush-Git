@@ -65,6 +65,7 @@ Optional Follow Up
 * Set up [Masquerade](http://drupal.org/project/masquerade) user and move Masquerade links from Navigation menu to Management menu
 
 
+<<<<<<< Updated upstream
 Zen Sub-Theme
 =================
 
@@ -83,6 +84,8 @@ You don't have bundler installed. Try running:
     gem install bundler
 
 
+=======
+>>>>>>> Stashed changes
 TODO
 =================
 
