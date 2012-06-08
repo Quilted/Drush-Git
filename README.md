@@ -73,6 +73,16 @@ Zen Sub-Theme
 * Adds general.css file
 
 
+Troubleshooting
+=================
+
+...'gem_original_require': no such file to load -- bundler/setup (LoadError)
+____________________________________________________
+
+You don't have bundler installed. Try running:
+    gem install bundler
+
+
 TODO
 =================
 
