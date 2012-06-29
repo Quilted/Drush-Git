@@ -79,6 +79,7 @@ projects[media_soundcloud][type] = "module"
 projects[omega][type] = "theme"
 projects[omega_tools][type] = "module"
 projects[delta][type] = "module"
+projects[ds][type] = "module"
 
   
 ; Libraries

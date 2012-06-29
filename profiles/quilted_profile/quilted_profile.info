@@ -56,6 +56,7 @@ dependencies[] = media_soundcloud
 
 dependencies[] = omega_tools
 dependencies[] = delta
+dependencies[] = ds
 
 dependencies[] = quilted_dev
 
