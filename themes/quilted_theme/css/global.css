@@ -1,2 +1,45 @@
 /* This file will hold styles for the mobile version of your website (mobile first). */
 /* This also can include ANY global CSS that applies site-wide. Unless overwritten by a more specific style rule, CSS declarations in global.css will apply site-wide. */
+
+/*****************************************************
+ * GENERAL: TYPOGRAPHY
+ ****************************************************/
+body {
+  font-size: 0.625em; // Sets base font-size to 10px for easy em calculations.
+}
+
+// Sets up auto-hypenation at the end of a line.
+p {
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  hyphens: auto;
+}
+
+// Hanging punctuation.
+blockquote {
+  text-indent: -0.8em;
+}
+
+ul,
+ol {
+  list-style-position: outside;
+}
+
+// Smart quotes. 
+// Don't forget to add language specific smart quotes on a multilingual site.
+:lang(en-us) >q {
+  quotes: "\201c" "\201d" "\2018" "\2019";
+}
+
+/* Uncomment for indented paragraphs.
+p {
+  text-indent: 2.5em;
+}
+
+h1 + p,
+h2 + p,
+h3 + p {
+  text-indent: 0;
+}
+*/
+
