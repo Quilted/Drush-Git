@@ -39,6 +39,9 @@ projects[masquerade][type] = "module"
 
 ; Modules: Helpers
 ; --------
+projects[boxes][type] = "module"
+projects[better_formats][type] = "module"
+projects[better_exposed_filters][type] = "module"
 projects[date][type] = "module"
 projects[ctools][type] = "module"
 projects[token][type] = "module"
@@ -52,8 +55,8 @@ projects[backup_migrate][type] = "module"
 
 ; Modules: Views and Panels
 ; --------
-projects[panels][type] = "module"
-projects[panels][patch][] = "http://drupal.org/files/issues/panels_custom_content_pane_css_class.patch"
+;projects[panels][type] = "module"
+;projects[panels][patch][] = "http://drupal.org/files/issues/panels_custom_content_pane_css_class.patch"
 projects[views][type] = "module"
 projects[views_bulk_operations][type] = "module"
 projects[context][type] = "module"
