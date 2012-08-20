@@ -18,7 +18,7 @@ function quilted_profile_install() {
   );
   $full_html_no_filters_format = (object) $full_html_no_filters_format;
   filter_format_save($full_html_no_filters_format);
-      
+
   $filtered_html_format = array(
     'format' => 'filtered_html',
     'name' => 'Filtered HTML',
@@ -85,7 +85,7 @@ function quilted_profile_install() {
   // Set default and admin themes.
   $default_theme = variable_get('theme_default', 'bartik');
   $admin_theme = 'seven';
-  
+
   // Enable some standard blocks.
   $values = array(
     array(
@@ -184,7 +184,7 @@ function quilted_profile_install() {
     $query->values($record);
   }
   $query->execute();
-  
+
   // Insert default pre-defined node types into the database. For a complete
   // list of available node type attributes, refer to the node type API
   // documentation at: http://api.drupal.org/api/HEAD/function/hook_node_info.
@@ -205,7 +205,7 @@ function quilted_profile_install() {
     node_type_save($type);
     node_add_body_field($type);
   }
-  
+
   // Insert default pre-defined RDF mapping into the database.
   $rdf_mappings = array(
     array(
@@ -219,7 +219,7 @@ function quilted_profile_install() {
   foreach ($rdf_mappings as $rdf_mapping) {
     rdf_mapping_save($rdf_mapping);
   }
-  
+
   // Default "Basic page" to not be promoted and have comments disabled.
   variable_set('node_options_page', array('status'));
   variable_set('comment_page', COMMENT_NODE_HIDDEN);
@@ -280,7 +280,7 @@ function quilted_profile_install() {
     ),
   );
   field_create_instance($instance);
-  
+
   // Enable default permissions for system roles.
   $filtered_html_permission = filter_permission_name($filtered_html_format);
   user_role_grant_permissions(DRUPAL_ANONYMOUS_RID, array('access content', $filtered_html_permission));
@@ -308,7 +308,7 @@ function quilted_profile_install() {
     ->execute();
   variable_set('admin_theme', 'seven');
   variable_set('node_admin_theme', '1');
-  
+
   // Enable quilted theme.
   db_update('system')
     ->fields(array('status' => 1))
@@ -321,8 +321,8 @@ function quilted_profile_install() {
 
   // Set default country.
   variable_set('site_default_country', 'US');
-  
-  // Create new date formats.    
+
+  // Create new date formats.
   $date_formats = array(
     array(
       'format' => 'n/j/y - g:i',
@@ -336,26 +336,26 @@ function quilted_profile_install() {
       'format' => 'l, F j, Y - g:ia',
       'type' => 'long'
     ),
-  );  
+  );
   $query = db_insert('date_formats')->fields(array('format', 'type'));
   foreach ($date_formats as $record) {
     $query->values($record);
   }
   $query->execute();
-    
-    
+
+
   // Set date formats.
   variable_set('date_format_short', 'n/j/y - g:i');
   variable_set('date_format_medium', 'D, M j, Y - g:ia');
   variable_set('date_format_long', 'l, F j, Y - g:ia');
-  
+
   // Set first day of the week.
   variable_set('date_first_day', '0');
-  
+
   // Set default and temporary file paths.
   variable_set('file_private_path', '../private_files');
   variable_set('file_temporary_path', '../tmp_files');
-  
+
   // Set WYSIWYG profile.
   db_insert('wysiwyg')
     ->fields(array('editor' => 'ckeditor', 'settings' => 'a:20:{s:7:"default";i:1;s:11:"user_choose";i:0;s:11:"show_toggle";i:1;s:5:"theme";s:8:"advanced";s:8:"language";s:2:"en";s:7:"buttons";a:2:{s:7:"default";a:13:{s:4:"Bold";i:1;s:6:"Italic";i:1;s:9:"Underline";i:1;s:12:"BulletedList";i:1;s:12:"NumberedList";i:1;s:7:"Outdent";i:1;s:6:"Indent";i:1;s:4:"Link";i:1;s:6:"Unlink";i:1;s:6:"Anchor";i:1;s:10:"Blockquote";i:1;s:13:"PasteFromWord";i:1;s:6:"Format";i:1;}s:6:"drupal";a:1:{s:5:"media";i:1;}}s:11:"toolbar_loc";s:3:"top";s:13:"toolbar_align";s:4:"left";s:8:"path_loc";s:6:"bottom";s:8:"resizing";i:1;s:11:"verify_html";i:1;s:12:"preformatted";i:0;s:22:"convert_fonts_to_spans";i:1;s:17:"remove_linebreaks";i:1;s:23:"apply_source_formatting";i:0;s:27:"paste_auto_cleanup_on_paste";i:0;s:13:"block_formats";s:20:"p,h2,h3,h4,h5,h6,div";s:11:"css_setting";s:5:"theme";s:8:"css_path";s:0:"";s:11:"css_classes";s:0:"";}', 'format' => 'filtered_html'))
@@ -411,5 +411,10 @@ function quilted_profile_install() {
   shortcut_set_save($shortcut_set);
   // Assign this set to the user 1.
   shortcut_set_assign_user($shortcut_set, user_load(1));
-  
+
+  // Turn off overlay for user 1.
+  $user = user_load(1);
+  $user->data['overlay'] = 0;
+  user_save($user);
+
 }
