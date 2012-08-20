@@ -27,6 +27,7 @@ dependencies[] = views
 dependencies[] = views_ui
 dependencies[] = views_bulk_operations
 dependencies[] = context
+dependencies[] = context_ui
 
 dependencies[] = title
 dependencies[] = date
@@ -56,6 +57,8 @@ dependencies[] = media_soundcloud
 
 dependencies[] = omega_tools
 dependencies[] = delta
+dependencies[] = delta_ui
+dependencies[] = delta_blocks
 dependencies[] = ds
 
 dependencies[] = quilted_dev
