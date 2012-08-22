@@ -21,8 +21,7 @@ command :setup do |c|
       puts "Please specify a project name."
     else
       # Setup constants.
-      # @TODO make sure project name is safe.
-      PROJECT_NAME = args[0]
+      PROJECT_NAME = sanitize_filename args[0]
       SOURCE_PATH = File.expand_path(File.dirname(__FILE__))
 
       # Setup optional flags.
@@ -53,6 +52,19 @@ command :setup do |c|
   end
 end
 
+def sanitize_filename(filename)
+  return filename.strip do |name|
+    # NOTE: File.basename doesn't work right with Windows paths on Unix
+    # get only the filename, not the whole path
+    name.gsub! /^.*(\\|\/)/, ''
+
+    # Finally, replace all non alphanumeric, underscore or periods with underscore
+    # name.gsub! /[^\w\.\-]/, '_'
+    # Basically strip out the non-ascii alphabets too and replace with x. You don't want all _ :)
+    name.gsub!(/[^0-9A-Za-z.\-]/, 'x')
+  end
+end
+
 def create_file_structure
   puts 'Setting up file structure...'
   FileUtils.mkdir_p "#{ PROJECT_NAME }/databases"
@@ -79,22 +91,48 @@ def create_gitignore(gitignore)
 end
 
 def create_drushrc_symlink
-  puts  "Create drushrc.php symlink..."
+  puts "Create drushrc.php symlink..."
   File.symlink("../drushrc.php", "#{ PROJECT_NAME }/www/drushrc.php")
 end
 
 def copy_install_profile
+  puts  "Copy install profile..."
   FileUtils.cp_r "#{ SOURCE_PATH }/profiles/quilted_profile", "#{ PROJECT_NAME }/www/profiles/quilted_profile"
 end
 
 def copy_features
-  FileUtils.mkdir_p "#{ PROJECT_NAME }/www/sites/all/modules/custom"
-  FileUtils.cp_r "#{ SOURCE_PATH }/modules/.", "#{ PROJECT_NAME }/www/sites/all/modules/custom"
+  puts  "Copy dev and prod features..."
+  path = "#{ PROJECT_NAME }/www/sites/all/modules/custom"
+  FileUtils.mkdir_p path
+  FileUtils.cp_r "#{ SOURCE_PATH }/modules/.", "#{ path }"
 end
 
 def copy_subtheme
   puts "Create Omega subtheme..."
   FileUtils.cp_r "#{ SOURCE_PATH }/themes/.", "#{ PROJECT_NAME }/www/sites/all/themes"
+  replace_prefix "#{ PROJECT_NAME }/www/sites/all/themes"
+end
+
+def replace_prefix(path)
+  Dir.glob(path + '/*') do |filename|
+    next if filename == '.' or filename == '..'
+
+    if File.directory? filename
+      replace_prefix filename
+    end
+
+    if File.file? filename
+      text = File.read(filename)
+      replace = text.gsub(/quilted/, PROJECT_NAME)
+      File.open(filename, "w") {|file| file.puts replace}
+    end
+
+    if File.basename(filename) =~ /quilted/
+      new_name = File.basename(filename).gsub(/quilted/, PROJECT_NAME)
+      newpath = File.join(path, new_name)
+      File.rename(filename, newpath)
+    end
+  end
 end
 
 def install_drupal(install_profile, db_user, db_password, drupal_email)
@@ -265,11 +303,12 @@ def create_general_feature
     'user_permission:access all views',
     'user_permission:administer xmlsitemap']
 
-  si_command= "drush fe quilted_general " + components.join(' ') + " " + permissions.map { |i| "'" + i.to_s + "'" }.join(' ') + " --destination='sites/all/modules/custom' -y"
+  feature_name = "#{ PROJECT_NAME }_general"
+  si_command= "drush fe #{ feature_name } " + components.join(' ') + " " + permissions.map { |i| "'" + i.to_s + "'" }.join(' ') + " --destination='sites/all/modules/custom' -y"
 
   FileUtils.cd "#{ PROJECT_NAME }/www"
   system %{ #{ si_command } }
-  system %{ drush en quilted_general -y }
+  system %{ drush en #{ feature_name } -y }
   FileUtils.cd "../.."
 end
 
