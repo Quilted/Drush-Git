@@ -10,6 +10,8 @@ www/sites/default/files/
 # Ignore backups and temporary files
 www/backup
 www/sites/default/files/tmp/
+tmp_files/
+private_files/
 
 # Ignore logs
 log/
