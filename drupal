@@ -199,7 +199,7 @@ def create_general_feature
     'filter:filtered_html',
     'filter:full_html',
     'filter:plain_text',
-    # 'filter:ds_code',
+    'filter:ds_code',
 
     # Image
     'image:thumbnail',
@@ -239,6 +239,7 @@ def create_general_feature
     'user_permission:administer delta',
     'user_permission:admin_view_modes',
     'user_permission:admin_fields',
+    'user_permission:admin_classes',
     'user_permission:admin_display_suite',
     'user_permission:administer features',
     'user_permission:manage features',

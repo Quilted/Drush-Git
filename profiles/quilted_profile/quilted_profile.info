@@ -63,6 +63,8 @@ dependencies[] = delta
 dependencies[] = delta_ui
 dependencies[] = delta_blocks
 dependencies[] = ds
+dependencies[] = ds_ui
+dependencies[] = ds_format
 
 dependencies[] = quilted_dev
 
