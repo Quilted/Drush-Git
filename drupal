@@ -199,7 +199,7 @@ def create_general_feature
     'filter:filtered_html',
     'filter:full_html',
     'filter:plain_text',
-    'filter:ds_code',
+    # 'filter:ds_code',
 
     # Image
     'image:thumbnail',
