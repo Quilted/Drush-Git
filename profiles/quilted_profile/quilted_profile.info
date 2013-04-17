@@ -41,6 +41,8 @@ dependencies[] = strongarm
 dependencies[] = features
 dependencies[] = advanced_help
 dependencies[] = backup_migrate
+dependencies[] = modernizr
+dependencies[] = libraries
 
 dependencies[] = pathauto
 dependencies[] = redirect

@@ -277,6 +277,7 @@ def create_general_feature
     'user_permission:administer search',
     'user_permission:search content',
     'user_permission:use advanced search',
+    'user_permission:administer modernizr',
     'user_permission:administer shortcuts',
     'user_permission:customize shortcut links',
     'user_permission:switch shortcut sets',

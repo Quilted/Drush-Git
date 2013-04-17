@@ -49,6 +49,7 @@ projects[features][type] = "module"
 projects[advanced_help][type] = "module"
 projects[navigation404][type] = "module"
 projects[backup_migrate][type] = "module"
+projects[modernizr][type] = "module"
 
 
 ; Modules: Views and Panels
@@ -85,6 +86,7 @@ projects[ds][type] = "module"
   
 ; Libraries
 ; ---------
+projects[libraries][type] = "module"
 libraries[ckeditor][download][type] = "get"
 libraries[ckeditor][download][url] = "http://download.cksource.com/CKEditor/CKEditor/CKEditor%203.3.1/ckeditor_3.3.1.tar.gz"
 libraries[ckeditor][destination] = "libraries"
