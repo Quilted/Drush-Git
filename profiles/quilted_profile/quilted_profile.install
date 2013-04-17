@@ -376,8 +376,8 @@ function quilted_profile_install() {
       'weight' => -17,
     ),
     array(
-      'link_path' => 'admin/structure/pages',
-      'link_title' => st('Panel pages'),
+      'link_path' => 'admin/structure/context',
+      'link_title' => st('Context'),
       'weight' => -16,
     ),
     array(
@@ -386,8 +386,8 @@ function quilted_profile_install() {
       'weight' => -15,
     ),
     array(
-      'link_path' => 'admin/structure/ctools-content',
-      'link_title' => st('Custom content panes'),
+      'link_path' => 'admin/structure/types',
+      'link_title' => st('Content types'),
       'weight' => -14,
     ),
   );
