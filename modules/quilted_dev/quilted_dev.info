@@ -3,6 +3,7 @@ dependencies[] = "strongarm"
 dependencies[] = "devel"
 dependencies[] = "diff"
 dependencies[] = "masquerade"
+dependencies[] = "shield"
 
 description = "Quilted Development Features"
 features[ctools][] = "strongarm:strongarm:1"

@@ -12,6 +12,7 @@ include_once('quilted_prod.features.inc');
 function quilted_prod_install() {
   $modules = array(
     'devel',
+    'shield',
   );
   module_disable($modules);
 }
