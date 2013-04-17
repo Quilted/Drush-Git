@@ -3,7 +3,6 @@ dependencies[] = "strongarm"
 dependencies[] = "devel"
 dependencies[] = "diff"
 dependencies[] = "coder"
-dependencies[] = "menu_attributes"
 dependencies[] = "masquerade"
 
 description = "Quilted Development Features"

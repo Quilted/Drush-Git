@@ -255,7 +255,6 @@ def create_general_feature
     'user_permission:edit media',
     'user_permission:add media from remote sources',
     'user_permission:administer menu',
-    'user_permission:administer menu attributes',
     'user_permission:bypass node access',
     'user_permission:administer content types',
     'user_permission:administer nodes',
