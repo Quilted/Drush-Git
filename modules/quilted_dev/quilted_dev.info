@@ -27,6 +27,7 @@ features[variable][] = devel_rebuild_theme_registry
 features[variable][] = devel_redirect_page
 features[variable][] = devel_use_uncompressed_jquery
 features[variable][] = devel_xhprof_enabled
+features[variable][] = error_level
 features[variable][] = page_cache_maximum_age
 features[variable][] = page_compression
 features[variable][] = preprocess_css
