@@ -273,6 +273,7 @@ def create_general_feature
     'user_permission:create url aliases',
     'user_permission:administer pathauto',
     'user_permission:notify of path changes',
+    'user_permission:administer redirects',
     'user_permission:administer search',
     'user_permission:search content',
     'user_permission:use advanced search',

@@ -43,6 +43,8 @@ dependencies[] = advanced_help
 dependencies[] = backup_migrate
 
 dependencies[] = pathauto
+dependencies[] = redirect
+dependencies[] = globalredirect
 dependencies[] = xmlsitemap
 dependencies[] = navigation404
 

@@ -60,6 +60,8 @@ projects[context][type] = "module"
 ; Modules: SEO
 ; --------
 projects[pathauto][type] = "module"
+projects[redirect][type] = "module"
+projects[globalredirect][type] = "module"
 projects[xmlsitemap][type] = "module"
 
 
