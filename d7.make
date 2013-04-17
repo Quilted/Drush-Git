@@ -31,7 +31,6 @@ projects[drupal][version] = 7
 ; --------
 projects[devel][type] = "module"
 projects[diff][type] = "module"
-projects[coder][type] = "module"
 projects[masquerade][type] = "module"
 
 
