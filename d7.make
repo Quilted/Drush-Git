@@ -32,7 +32,6 @@ projects[drupal][version] = 7
 projects[devel][type] = "module"
 projects[diff][type] = "module"
 projects[coder][type] = "module"
-;projects[block_class][type] = "module"
 projects[menu_attributes][type] = "module"
 projects[masquerade][type] = "module"
 
@@ -55,8 +54,6 @@ projects[backup_migrate][type] = "module"
 
 ; Modules: Views and Panels
 ; --------
-;projects[panels][type] = "module"
-;projects[panels][patch][] = "http://drupal.org/files/issues/panels_custom_content_pane_css_class.patch"
 projects[views][type] = "module"
 projects[views_bulk_operations][type] = "module"
 projects[context][type] = "module"
