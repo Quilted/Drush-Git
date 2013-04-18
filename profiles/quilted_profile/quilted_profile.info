@@ -50,6 +50,7 @@ dependencies[] = globalredirect
 dependencies[] = xmlsitemap
 dependencies[] = navigation404
 
+dependencies[] = wysiwyg_filter
 dependencies[] = wysiwyg
 dependencies[] = media
 dependencies[] = media_internet

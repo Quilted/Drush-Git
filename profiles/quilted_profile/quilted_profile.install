@@ -13,7 +13,7 @@ function quilted_profile_install() {
   $full_html_no_filters_format = array(
     'format' => 'full_html_no_filters',
     'name' => 'Full HTML with no filters',
-    'weight' => -1,
+    'weight' => 2,
     'filters' => array(),
   );
   $full_html_no_filters_format = (object) $full_html_no_filters_format;
@@ -29,12 +29,16 @@ function quilted_profile_install() {
         'weight' => 0,
         'status' => 1,
       ),
-      // HTML filter.
-      'filter_html' => array(
+      // WYSIWYG filter.
+      'wysiwyg' => array(
         'weight' => 1,
         'status' => 1,
         'settings' => array(
-          'allowed_html' => '<a> <em> <strong> <cite> <blockquote> <code> <ul> <ol> <li> <dl> <dt> <dd> <p> <br> <h2> <h3> <h4> <h5> <img>',
+          'valid_elements' => 'a[!href|target<_blank|title],
+div[align<center?justify?left?right],
+p[align<center?justify?left?right],
+br,span,em,strong,cite,code,blockquote,ul,ol,li,dl,dt,dd,img
+h2,h3,h4,h5,h6',
         ),
       ),
       // Line break filter.

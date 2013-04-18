@@ -71,6 +71,10 @@ projects[xmlsitemap][type] = "module"
 ; --------
 projects[title][type] = "module"
 projects[wysiwyg][type] = "module"
+projects[wysiwyg][download][type] = git
+projects[wysiwyg][download][revision] = 9cbb01fb250edf6afcfe2eb5c84842a80d0cd3eb
+projects[wysiwyg][download][branch] = 7.x-2.x
+projects[wysiwyg_filter][type] = "module"
 projects[media][type] = "module"
 projects[media_youtube][type] = "module"
 projects[media_soundcloud][type] = "module"
@@ -88,5 +92,5 @@ projects[ds][type] = "module"
 ; ---------
 projects[libraries][type] = "module"
 libraries[ckeditor][download][type] = "get"
-libraries[ckeditor][download][url] = "http://download.cksource.com/CKEditor/CKEditor/CKEditor%203.3.1/ckeditor_3.3.1.tar.gz"
+libraries[ckeditor][download][url] = "http://download.cksource.com/CKEditor/CKEditor/CKEditor%204.1/ckeditor_4.1_full.zip"
 libraries[ckeditor][destination] = "libraries"
