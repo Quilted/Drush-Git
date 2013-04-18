@@ -198,7 +198,6 @@ def create_general_feature
 
     # Fields
     'field:node-page-body',
-    'field:node-page-field_tags',
 
     # Filters
     'filter:full_html_no_filters',
@@ -215,9 +214,6 @@ def create_general_feature
 
     # Node
     'node:page',
-
-    # Taxonomy
-    'taxonomy:tags',
 
     # Roles
     'user_role:administrator']
@@ -301,8 +297,6 @@ def create_general_feature
     'user_permission:access site reports',
     'user_permission:block IP addresses',
     'user_permission:administer taxonomy',
-    'user_permission:edit terms in 1',
-    'user_permission:delete terms in 1',
     'user_permission:access toolbar',
     'user_permission:administer permissions',
     'user_permission:administer users',
