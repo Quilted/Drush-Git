@@ -5,3 +5,13 @@
  */
 
 include_once('quilted_dev.features.inc');
+
+/**
+ * Implements hook_enable().
+ */
+function quilted_dev_enable() {
+  $modules = array(
+    'googleanalytics',
+  );
+  module_disable($modules);
+}

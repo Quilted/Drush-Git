@@ -7,9 +7,9 @@
 include_once('quilted_prod.features.inc');
 
 /**
- * Implements hook_install().
+ * Implements hook_enable().
  */
-function quilted_prod_install() {
+function quilted_prod_enable() {
   $modules = array(
     'devel',
     'shield',
