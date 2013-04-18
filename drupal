@@ -46,6 +46,7 @@ command :setup do |c|
       copy_install_profile
       copy_subtheme
       install_drupal options.install_profile, db_user, db_password, drupal_email
+      copy_config_files
       create_general_feature
       setup_git
     end
@@ -142,6 +143,11 @@ def install_drupal(install_profile, db_user, db_password, drupal_email)
   FileUtils.cd "#{ PROJECT_NAME }/www"
   system %{ #{ si_command } }
   FileUtils.cd "../.."
+end
+
+def copy_config_files
+  puts "Copy config files..."
+  FileUtils.cp "#{ SOURCE_PATH }/config/config.js", "#{ PROJECT_NAME }/www/sites/all/libraries/ckeditor/config.js"
 end
 
 def create_general_feature
