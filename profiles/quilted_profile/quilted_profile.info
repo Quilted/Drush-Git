@@ -48,6 +48,8 @@ dependencies[] = pathauto
 dependencies[] = redirect
 dependencies[] = globalredirect
 dependencies[] = xmlsitemap
+dependencies[] = xmlsitemap_node
+dependencies[] = xmlsitemap_custom
 dependencies[] = navigation404
 
 dependencies[] = wysiwyg_filter
