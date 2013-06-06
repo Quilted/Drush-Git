@@ -34,10 +34,11 @@ function quilted_profile_install() {
         'weight' => 1,
         'status' => 1,
         'settings' => array(
-          'valid_elements' => 'a[!href|target<_blank|title],
+          'valid_elements' => 'span[class],
+a[!href|target<_blank|title|class],
 div[align<center?justify?left?right],
 p[align<center?justify?left?right],
-br,span,em,strong,cite,code,blockquote,ul,ol,li,dl,dt,dd,img
+br,em,strong,u,cite,code,blockquote,ul,ol,li,dl,dt,dd,img
 h2,h3,h4,h5,h6',
         ),
       ),
