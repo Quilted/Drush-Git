@@ -197,7 +197,8 @@ def create_general_feature
     'variable:xmlsitemap_regenerate_needed',
 
     # Fields
-    'field:node-page-body',
+    'field_base:body',
+    'field_instance:node-page-body',
 
     # Filters
     'filter:full_html_no_filters',
