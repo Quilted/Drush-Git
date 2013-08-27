@@ -4,6 +4,7 @@ require 'rubygems'
 require 'bundler/setup'
 require 'commander/import'
 require 'fileutils'
+require 'securerandom'
 
 program :version, '0.1'
 program :description, 'Setup an initial drupal setup'
@@ -138,7 +139,8 @@ end
 
 def install_drupal(install_profile, db_user, db_password, drupal_email)
   puts "Install Drupal..."
-  si_command = "drush si #{ install_profile } --site-name=#{ PROJECT_NAME } --site-mail=#{ drupal_email } --account-name=admin --account-pass=admin --account-mail=#{ drupal_email } --db-url=mysql://#{ db_user }:#{ db_password }@localhost:/#{ PROJECT_NAME } -y"
+  admin_password = SecureRandom.base64
+  si_command = "drush si #{ install_profile } --site-name=#{ PROJECT_NAME } --site-mail=#{ drupal_email } --account-name=admin --account-pass=#{ admin_password } --account-mail=#{ drupal_email } --db-url=mysql://#{ db_user }:#{ db_password }@localhost:/#{ PROJECT_NAME } -y"
 
   FileUtils.cd "#{ PROJECT_NAME }/www"
   system %{ #{ si_command } }
