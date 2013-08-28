@@ -45,8 +45,8 @@ command :setup do |c|
       create_drushrc_symlink
       copy_features
       copy_install_profile
-      copy_subtheme
       install_drupal options.install_profile, db_user, db_password, drupal_email
+      copy_subtheme
       copy_config_files
       create_general_feature
       setup_git
@@ -111,8 +111,11 @@ end
 
 def copy_subtheme
   puts "Create Omega subtheme..."
-  FileUtils.cp_r "#{ SOURCE_PATH }/themes/.", "#{ PROJECT_NAME }/www/sites/all/themes"
-  replace_prefix "#{ PROJECT_NAME }/www/sites/all/themes"
+  FileUtils.cd "#{ PROJECT_NAME }/www"
+  subtheme_command = "drush omega-subtheme #{ PROJECT_NAME }_theme --enable --set-default --starterkit=basic"
+  system %{ #{ subtheme_command } }
+  system %{ echo "\n#Exclude Compiled CSS\ncss" >> sites/all/themes/#{ PROJECT_NAME }_theme/.gitignore }
+  FileUtils.cd "../.."
 end
 
 def replace_prefix(path)
@@ -244,7 +247,6 @@ def create_general_feature
     'user_permission:administer contexts',
     'user_permission:access contextual links',
     'user_permission:administer delta blocks',
-    'user_permission:administer delta',
     'user_permission:admin_view_modes',
     'user_permission:admin_fields',
     'user_permission:admin_classes',

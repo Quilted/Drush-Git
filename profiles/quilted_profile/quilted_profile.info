@@ -60,9 +60,6 @@ dependencies[] = file_entity
 dependencies[] = media_youtube
 dependencies[] = media_soundcloud
 
-dependencies[] = omega_tools
-dependencies[] = delta
-dependencies[] = delta_ui
 dependencies[] = delta_blocks
 dependencies[] = ds
 dependencies[] = ds_ui
