@@ -84,7 +84,6 @@ projects[media_soundcloud][type] = "module"
 ; Themes
 ; --------
 projects[omega][type] = "theme"
-projects[omega_tools][type] = "module"
 projects[delta][type] = "module"
 projects[ds][type] = "module"
 
