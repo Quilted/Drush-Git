@@ -15,3 +15,7 @@ private_files/
 
 # Ignore logs
 log/
+
+# Ignore devel themer and maillog modules
+www/sites/all/modules/devel_themer
+www/sites/all/modules/simplehtmldom
