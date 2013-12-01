@@ -32,6 +32,7 @@ command :setup do |c|
       db_user = ask ">> Database user: "
       db_password = password ">> Database password: "
       drupal_email = ask ">> Drupal email: "
+      project_machine_name = ask ">> Project machine name (3-5 characters long, used for theme and general feature): "
 
       # Go through the process.
       create_file_structure
@@ -42,8 +43,8 @@ command :setup do |c|
       copy_features
       copy_install_profile
       install_drupal "quilted_profile", db_user, db_password, drupal_email
-      copy_subtheme
-      create_general_feature
+      copy_subtheme project_machine_name
+      create_general_feature project_machine_name
       setup_git
     end
   end
@@ -122,7 +123,7 @@ def install_drupal(install_profile, db_user, db_password, drupal_email)
   FileUtils.cd "../.."
 end
 
-def create_general_feature
+def create_general_feature(project_machine_name)
   puts "Create general feature..."
   components = [
     # Variables
@@ -280,7 +281,7 @@ def create_general_feature
     'user_permission:access all views',
     'user_permission:administer xmlsitemap']
 
-  feature_name = "#{ PROJECT_NAME }_general"
+  feature_name = "#{ project_machine_name }_general"
   si_command= "drush fe #{ feature_name } " + components.join(' ') + " " + permissions.map { |i| "'" + i.to_s + "'" }.join(' ') + " --destination='sites/all/modules/custom' -y"
 
   FileUtils.cd "#{ PROJECT_NAME }/www"
