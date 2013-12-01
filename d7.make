@@ -22,75 +22,77 @@ api = 2
 ; a core project. This is usually Drupal core, but you can also specify
 ; alternative core projects like Pressflow. Note that makefiles included with
 ; install profiles *should not* include a core project.
-  
-; Drupal 7.x. Requires the `core` property to be set to 7.x.
-projects[drupal][version] = 7.23
+
+projects[] = drupal
 
 
 ; Modules: Development
 ; --------
-projects[devel][type] = "module"
-projects[diff][type] = "module"
-projects[masquerade][type] = "module"
-projects[shield][type] = "module"
+projects[] = devel
+projects[] = diff
+projects[] = masquerade
+projects[] = shield
+projects[] = maillog
 
 
-; Modules: Helpers
+; Modules: Production
 ; --------
-projects[boxes][type] = "module"
-projects[better_formats][type] = "module"
-projects[better_exposed_filters][type] = "module"
-projects[date][type] = "module"
-projects[ctools][type] = "module"
-projects[token][type] = "module"
-projects[entity][type] = "module"
-projects[strongarm][type] = "module"
-projects[features][type] = "module"
-projects[advanced_help][type] = "module"
-projects[navigation404][type] = "module"
-projects[backup_migrate][type] = "module"
-projects[modernizr][type] = "module"
+projects[] = google_analytics
 
 
-; Modules: Views and Panels
+; Modules: Both
 ; --------
-projects[views][type] = "module"
-projects[views_bulk_operations][type] = "module"
-projects[context][type] = "module"
-
-
-; Modules: SEO
-; --------
-projects[pathauto][type] = "module"
-projects[redirect][type] = "module"
-projects[globalredirect][type] = "module"
-projects[xmlsitemap][type] = "module"
-projects[google_analytics][type] = "module"
-
-
-; Modules: WYSIWYG
-; --------
-projects[title][type] = "module"
-projects[wysiwyg][type] = "module"
-projects[wysiwyg][download][type] = git
+projects[] = advanced_help
+projects[] = backup_migrate
+projects[] = better_exposed_filters
+projects[] = better_formats
+projects[] = boxes
+projects[] = context
+projects[] = context_error
+projects[] = ctools
+projects[] = custom_search
+projects[] = date
+projects[] = delta
+projects[] = draggableviews
+projects[] = ds
+projects[] = email
+projects[] = entity
+projects[] = entityreference
+projects[] = features
+projects[] = field_group
+projects[] = globalredirect
+projects[] = jquery_update
+projects[] = link
+projects[] = media
+projects[] = media_soundcloud
+projects[] = media_vimeo
+projects[] = media_youtube
+projects[] = modernizr
+projects[] = navigation404
+projects[] = pathauto
+projects[] = redirect
+projects[] = strongarm
+projects[] = textformatter
+projects[] = title
+projects[] = token
+projects[] = transliteration
+projects[] = variable
+projects[] = views
+projects[] = views_bulk_operations
+projects[] = wysiwyg_filter
+projects[] = xmlsitemap
 projects[wysiwyg][download][revision] = 9cbb01fb250edf6afcfe2eb5c84842a80d0cd3eb
 projects[wysiwyg][download][branch] = 7.x-2.x
-projects[wysiwyg_filter][type] = "module"
-projects[media][type] = "module"
-projects[media_youtube][type] = "module"
-projects[media_soundcloud][type] = "module"
 
 
 ; Themes
 ; --------
-projects[omega][type] = "theme"
-projects[delta][type] = "module"
-projects[ds][type] = "module"
+projects[] = omega
 
   
 ; Libraries
 ; ---------
-projects[libraries][type] = "module"
+projects[] = libraries
 libraries[ckeditor][download][type] = "get"
-libraries[ckeditor][download][url] = "http://download.cksource.com/CKEditor/CKEditor/CKEditor%204.1/ckeditor_4.1_full.zip"
+libraries[ckeditor][download][url] = "http://download.cksource.com/CKEditor/CKEditor/CKEditor%204.1.2/ckeditor_4.1.2_full.zip"
 libraries[ckeditor][destination] = "libraries"
