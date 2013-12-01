@@ -13,41 +13,36 @@ command :setup do |c|
   c.syntax = 'drupal setup <project_name> [options]'
   c.description = 'Creates and installs a new Drupal project.'
   c.example 'Create a project called Superapp.', 'drupal setup "Superapp"'
-  c.option '--makefile FILE', String, 'Path to drush makefile'
   c.option '--gitignore FILE', String, 'Path to .gitignore file'
-  c.option '--install_profile NAME', String, 'The name of the install profile to use. Must be in profiles directory'
   c.option '--db_name NAME', String, 'Database name'
   c.action do |args, options|
     if args[0].nil?
       puts "Please specify a project name."
     else
-      # Setup constants.
+      # Set constants.
       PROJECT_NAME = sanitize_filename args[0]
       SOURCE_PATH = File.expand_path(File.dirname(__FILE__))
 
-      # Setup optional flags.
+      # Set optional flags.
       options.default \
-        :makefile => "#{ SOURCE_PATH }/d7.make",
         :gitignore  => "#{ SOURCE_PATH }/gitignore.txt",
-        :install_profile  => "quilted_profile",
         :db_name => PROJECT_NAME
 
       # Ask for key inputs.
-      db_user = ask "> Database user:"
-      db_password = password "> Database password:"
-      drupal_email = ask "> Drupal email:"
+      db_user = ask ">> Database user: "
+      db_password = password ">> Database password: "
+      drupal_email = ask ">> Drupal email: "
 
       # Go through the process.
       create_file_structure
       create_drushrc
       create_gitignore options.gitignore
-      download_drupal options.makefile
+      download_drupal "#{ SOURCE_PATH }/d7.make"
       create_drushrc_symlink
       copy_features
       copy_install_profile
-      install_drupal options.install_profile, db_user, db_password, drupal_email
+      install_drupal "quilted_profile", db_user, db_password, drupal_email
       copy_subtheme
-      copy_config_files
       create_general_feature
       setup_git
     end
@@ -71,9 +66,9 @@ def create_file_structure
   puts 'Setting up file structure...'
   FileUtils.mkdir_p "#{ PROJECT_NAME }/databases"
   FileUtils.mkdir_p "#{ PROJECT_NAME }/private_files"
-  FileUtils.touch "#{ PROJECT_NAME }/private_files/PLACEHOLDER.txt"
+  FileUtils.touch "#{ PROJECT_NAME }/private_files/PLACEHOLDER.md"
   FileUtils.mkdir_p "#{ PROJECT_NAME }/tmp_files"
-  FileUtils.touch "#{ PROJECT_NAME }/tmp_files/PLACEHOLDER.txt"
+  FileUtils.touch "#{ PROJECT_NAME }/tmp_files/PLACEHOLDER.md"
 end
 
 def create_drushrc
@@ -81,15 +76,14 @@ def create_drushrc
   FileUtils.cp "#{ SOURCE_PATH }/dgb/example-dgb.drushrc.php", "#{ PROJECT_NAME }/drushrc.php"
 end
 
+def create_gitignore(gitignore)
+  puts "Setting up .gitignore..."
+  FileUtils.cp "#{ gitignore }", "#{ PROJECT_NAME }/.gitignore"
+end
+
 def download_drupal(makefile)
   puts "Download Drupal and modules..."
   system %{ drush make --prepare-install #{ makefile } #{ PROJECT_NAME }/www }
-end
-
-def create_gitignore(gitignore)
-  puts "Setting up .gitignore..."
-  puts gitignore
-  FileUtils.cp "#{ gitignore }", "#{ PROJECT_NAME }/.gitignore"
 end
 
 def create_drushrc_symlink
@@ -148,11 +142,6 @@ def install_drupal(install_profile, db_user, db_password, drupal_email)
   FileUtils.cd "#{ PROJECT_NAME }/www"
   system %{ #{ si_command } }
   FileUtils.cd "../.."
-end
-
-def copy_config_files
-  puts "Copy config files..."
-  FileUtils.cp "#{ SOURCE_PATH }/config/config.js", "#{ PROJECT_NAME }/www/sites/all/libraries/ckeditor/config.js"
 end
 
 def create_general_feature
