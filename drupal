@@ -279,7 +279,13 @@ def create_general_feature(project_machine_name)
     'user_permission:select account cancellation method',
     'user_permission:administer views',
     'user_permission:access all views',
-    'user_permission:administer xmlsitemap']
+    'user_permission:administer xmlsitemap',
+    'user_permission:access draggableviews',
+    'user_permission:administer custom search',
+    'user_permission:administer fieldgroups',
+    'user_permission:context ajax block access',
+    'user_permission:generate features',
+    'user_permission:use custom search']
 
   feature_name = "#{ project_machine_name }_general"
   si_command= "drush fe #{ feature_name } " + components.join(' ') + " " + permissions.map { |i| "'" + i.to_s + "'" }.join(' ') + " --destination='sites/all/modules/custom' -y"
