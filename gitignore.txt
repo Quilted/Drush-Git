@@ -10,8 +10,11 @@ www/sites/default/files/
 # Ignore backups and temporary files
 www/backup
 www/sites/default/files/tmp/
-tmp_files/
-private_files/
+tmp_files/*
+!tmp_files/PLACEHOLDER.md
+private_files/*
+!private_files/PLACEHOLDER.md
+
 
 # Ignore logs
 log/
