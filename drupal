@@ -103,35 +103,13 @@ def copy_features
   FileUtils.cp_r "#{ SOURCE_PATH }/modules/.", "#{ path }"
 end
 
-def copy_subtheme
+def copy_subtheme(project_machine_name)
   puts "Create Omega subtheme..."
   FileUtils.cd "#{ PROJECT_NAME }/www"
-  subtheme_command = "drush omega-subtheme #{ PROJECT_NAME }_theme --enable --set-default --starterkit=basic"
+  subtheme_command = "drush omega-subtheme #{ project_machine_name }_theme --enable --set-default"
   system %{ #{ subtheme_command } }
-  system %{ echo "\n#Exclude Compiled CSS\ncss" >> sites/all/themes/#{ PROJECT_NAME }_theme/.gitignore }
+  FileUtils.cp "#{ SOURCE_PATH }/gitignore_theme.txt", "sites/all/themes/#{ project_machine_name }_theme/.gitignore"
   FileUtils.cd "../.."
-end
-
-def replace_prefix(path)
-  Dir.glob(path + '/*') do |filename|
-    next if filename == '.' or filename == '..'
-
-    if File.directory? filename
-      replace_prefix filename
-    end
-
-    if File.file? filename
-      text = File.read(filename).force_encoding("ISO-8859-1").encode("utf-8", replace: nil)
-      replace = text.gsub(/quilted/, PROJECT_NAME)
-      File.open(filename, "w") {|file| file.puts replace}
-    end
-
-    if File.basename(filename) =~ /quilted/
-      new_name = File.basename(filename).gsub(/quilted/, PROJECT_NAME)
-      newpath = File.join(path, new_name)
-      File.rename(filename, newpath)
-    end
-  end
 end
 
 def install_drupal(install_profile, db_user, db_password, drupal_email)
