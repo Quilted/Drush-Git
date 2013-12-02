@@ -1,0 +1,15 @@
+diff --git a/fitvids.js b/fitvids.js
+index acff3c3..08b5ea8 100644
+--- a/fitvids.js
++++ b/fitvids.js
+@@ -43,7 +43,9 @@
+             
+             // Fitvids!
+             for (var x = 0; x < selectors.length; x ++) {
+-              $(selectors[x]).fitVids({customSelector: custom_domains});
++              if ($(selectors[x]).length > 0) {
++                $(selectors[x]).fitVids({customSelector: custom_domains});
++              }
+             }
+           }
+         }

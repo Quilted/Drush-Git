@@ -1,0 +1,25 @@
+diff --git a/variable.module b/variable.module
+index 86e14c2..74f1564 100644
+--- a/variable.module
++++ b/variable.module
+@@ -439,7 +439,19 @@ function variable_edit_subform($list, $options = array()) {
+   $form = array();
+   foreach ($list as $name) {
+     if ($variable = variable_get_info($name, $options)) {
+-      $form[$name] = variable_form_element($variable, $options);
++      if (array_key_exists('group', $variable)) {
++         if (!array_key_exists($variable['group'], $form)) {
++           $group = variable_get_group($variable['group']);
++           $form[$variable['group']] = array("#type" => "fieldset", "#title" => $group['title']);
++           if (isset($group['description'])) {
++             $form[$variable['group']]['#description'] = $group['description'];
++           }
++          }
++         $form[$variable['group']][$name] = variable_form_element($variable, $options);
++      }
++      else {
++        $form[$name] = variable_form_element($variable, $options);
++      }
+     }
+   }
+   return $form;
