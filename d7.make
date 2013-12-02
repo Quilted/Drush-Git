@@ -86,7 +86,6 @@ projects[fitvids] = 1.14
 projects[flexslider] = 2.0-alpha3
 projects[media][download][revision] = e2625ed
 projects[media][download][branch] = 7.x-2.x
-projects[media_responsive] = 1.0-alpha1
 projects[media_soundcloud] = 1.0
 projects[media_youtube][download][revision] = 5faa00c1
 projects[media_youtube][download][branch] = 7.x-2.x
@@ -96,6 +95,7 @@ projects[picture][download][branch] = 7.x-1.x
 projects[wysiwyg][download][revision] = 31840cbf
 projects[wysiwyg][download][branch] = 7.x-2.x
 projects[] = wysiwyg_filter
+projects[] = image_dimensions
 
 
 ; Themes

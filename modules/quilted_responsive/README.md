@@ -13,10 +13,10 @@ Note: Version numbers and commit hashes indicate the most recent version tested 
 - [File Entity (7.x-2.0-alpha2)](https://drupal.org/project/features)
 - [Fitvids (7.x-1.14)](https://drupal.org/project/fitvids)
 - [Flexslider (7.x-2.0-alpha3)](https://drupal.org/project/flexslider)
+- [Image Dimensions](https://drupal.org/project/image_dimensions)
 - [Media (7.x-2.x: e2625ed)](https://drupal.org/project/media)
 - Media Bulk Upload (bundled with Media)
 - Media Internet (bundled with Media)
-- [Media Responsive (7.x-1.0-alpha1)](https://drupal.org/project/media_responsive)
 - [Media Soundcloud (7.x-1.0)](https://drupal.org/project/media_soundcloud)
 - Media WYSIWYG View Mode (bundled with Media)
 - [Media Youtube (7.x-2.x: 5faa00c1)](https://drupal.org/project/media_youtube)
@@ -33,13 +33,12 @@ Note: Version numbers and commit hashes indicate the most recent version tested 
 ## Known bugs & Open Issues
 
 - [WYSIWYG #1956778: ckeditor 4.x Advanced Content Filter breaks everything](https://drupal.org/node/1956778)
-- @todo
+- [Fitvids #2078821: Ckeditor does not show in explorer](https://drupal.org/node/2078821)
 
 ## Todo
 
 - Test file_entity 7.x-2.0-alpha3
 - Test latest media 7.x-2.x-dev (042f84fd)
-- Replace media_responsive with image_dimensions
 - Replace retina_images with hires_images
 - Test media_bulk_upload
 - Test media_youtube 7.x-2.0-rc4
