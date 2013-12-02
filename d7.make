@@ -60,14 +60,9 @@ projects[] = entity
 projects[] = entityreference
 projects[] = features
 projects[] = field_group
-projects[] = file_entity
 projects[] = globalredirect
 projects[] = jquery_update
 projects[] = link
-projects[] = media
-projects[] = media_soundcloud
-projects[] = media_vimeo
-projects[] = media_youtube
 projects[] = modernizr
 projects[] = navigation404
 projects[] = pathauto
@@ -80,10 +75,25 @@ projects[] = transliteration
 projects[] = variable
 projects[] = views
 projects[] = views_bulk_operations
-projects[] = wysiwyg_filter
 projects[] = xmlsitemap
-projects[wysiwyg][download][revision] = 9cbb01fb250edf6afcfe2eb5c84842a80d0cd3eb
+
+
+; Media Suite
+; --------
+projects[breakpoints] = 1.1
+projects[file_entity] = 2.0-alpha2
+projects[media][download][revision] = e2625ed
+projects[media][download][branch] = 7.x-2.x
+projects[media_responsive] = 1.0-alpha1
+projects[media_soundcloud] = 1.0
+projects[media_youtube][download][revision] = 5faa00c1
+projects[media_youtube][download][branch] = 7.x-2.x
+projects[retina_images] = 1.0-beta4
+projects[picture][download][revision] = 3d9fe6c
+projects[picture][download][branch] = 7.x-1.x
+projects[wysiwyg][download][revision] = 31840cbf
 projects[wysiwyg][download][branch] = 7.x-2.x
+projects[] = wysiwyg_filter
 
 
 ; Themes

@@ -103,7 +103,7 @@ def copy_install_profile
 end
 
 def copy_features
-  puts  "Copy dev and prod features..."
+  puts  "Copy custom features..."
   path = "#{ PROJECT_NAME }/www/sites/all/modules/custom"
   FileUtils.mkdir_p path
   FileUtils.cp_r "#{ SOURCE_PATH }/modules/.", "#{ path }"
