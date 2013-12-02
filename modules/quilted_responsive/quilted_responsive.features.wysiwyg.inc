@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * quilted_media.features.wysiwyg.inc
+ * quilted_responsive.features.wysiwyg.inc
  */
 
 /**
  * Implements hook_wysiwyg_default_profiles().
  */
-function quilted_media_wysiwyg_default_profiles() {
+function quilted_responsive_wysiwyg_default_profiles() {
   $profiles = array();
 
   // Exported profile: filtered_html

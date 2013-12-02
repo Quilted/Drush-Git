@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * quilted_media.features.user_permission.inc
+ * quilted_responsive.features.user_permission.inc
  */
 
 /**
  * Implements hook_user_default_permissions().
  */
-function quilted_media_user_default_permissions() {
+function quilted_responsive_user_default_permissions() {
   $permissions = array();
 
   // Exported permission: 'add media from remote sources'.

@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * quilted_media.ds.inc
+ * quilted_responsive.ds.inc
  */
 
 /**
  * Implements hook_ds_view_modes_info().
  */
-function quilted_media_ds_view_modes_info() {
+function quilted_responsive_ds_view_modes_info() {
   $export = array();
 
   $ds_view_mode = new stdClass();

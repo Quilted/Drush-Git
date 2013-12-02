@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * quilted_media.features.inc
+ * quilted_responsive.features.inc
  */
 
 /**
  * Implements hook_ctools_plugin_api().
  */
-function quilted_media_ctools_plugin_api($module = NULL, $api = NULL) {
+function quilted_responsive_ctools_plugin_api($module = NULL, $api = NULL) {
   if ($module == "breakpoints" && $api == "default_breakpoint_group") {
     return array("version" => "1");
   }
@@ -28,7 +28,7 @@ function quilted_media_ctools_plugin_api($module = NULL, $api = NULL) {
 /**
  * Implements hook_image_default_styles().
  */
-function quilted_media_image_default_styles() {
+function quilted_responsive_image_default_styles() {
   $styles = array();
 
   // Exported image style: responsive_large__narrow.

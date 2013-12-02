@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * quilted_media.default_breakpoint_group.inc
+ * quilted_responsive.default_breakpoint_group.inc
  */
 
 /**
  * Implements hook_default_breakpoint_group().
  */
-function quilted_media_default_breakpoint_group() {
+function quilted_responsive_default_breakpoint_group() {
   $export = array();
 
   // Breakpoints.

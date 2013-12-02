@@ -4,7 +4,7 @@
  * Code for the Quilted Media feature.
  */
 
-include_once 'quilted_media.features.inc';
+include_once 'quilted_responsive.features.inc';
 
 
 /**
@@ -12,7 +12,7 @@ include_once 'quilted_media.features.inc';
  *
  * Added to make WYSIWYG compatible with ckeditor 4.x. See #1956778.
  */
-function quilted_media_wysiwyg_editor_settings_alter(&$settings, $context) {
+function quilted_responsive_wysiwyg_editor_settings_alter(&$settings, $context) {
   if ($context['profile']->editor == 'ckeditor') {
     $settings['allowedContent'] = TRUE;
   }

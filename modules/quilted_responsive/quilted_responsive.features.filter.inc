@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * quilted_media.features.filter.inc
+ * quilted_responsive.features.filter.inc
  */
 
 /**
  * Implements hook_filter_default_formats().
  */
-function quilted_media_filter_default_formats() {
+function quilted_responsive_filter_default_formats() {
   $formats = array();
 
   // Exported format: Filtered HTML.

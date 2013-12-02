@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * quilted_media.default_picture_mapping.inc
+ * quilted_responsive.default_picture_mapping.inc
  */
 
 /**
  * Implements hook_default_picture_mapping().
  */
-function quilted_media_default_picture_mapping() {
+function quilted_responsive_default_picture_mapping() {
   $export = array();
 
   $picture_mapping = new stdClass();

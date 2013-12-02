@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * quilted_media.strongarm.inc
+ * quilted_responsive.strongarm.inc
  */
 
 /**
  * Implements hook_strongarm().
  */
-function quilted_media_strongarm() {
+function quilted_responsive_strongarm() {
   $export = array();
 
   $strongarm = new stdClass();

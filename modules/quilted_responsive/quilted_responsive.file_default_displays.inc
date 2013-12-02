@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * quilted_media.file_default_displays.inc
+ * quilted_responsive.file_default_displays.inc
  */
 
 /**
  * Implements hook_file_default_displays().
  */
-function quilted_media_file_default_displays() {
+function quilted_responsive_file_default_displays() {
   $export = array();
 
   $file_display = new stdClass();

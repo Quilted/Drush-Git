@@ -1,4 +1,4 @@
-name = Quilted Media
+name = Quilted Responsive
 core = 7.x
 package = Features
 dependencies[] = breakpoints
