@@ -43,8 +43,9 @@ command :setup do |c|
       copy_features
       copy_install_profile
       install_drupal "quilted_profile", db_user, db_password, drupal_email
-      copy_subtheme project_machine_name
+      create_subtheme project_machine_name
       create_general_feature project_machine_name
+      create_patches_directory
       setup_git
     end
   end
@@ -108,7 +109,7 @@ def copy_features
   FileUtils.cp_r "#{ SOURCE_PATH }/modules/.", "#{ path }"
 end
 
-def copy_subtheme(project_machine_name)
+def create_subtheme(project_machine_name)
   puts "Create Omega subtheme..."
   FileUtils.cd "#{ PROJECT_NAME }/www"
   subtheme_command = "drush omega-subtheme #{ project_machine_name }_theme --enable --set-default --with-libraries"
@@ -302,6 +303,11 @@ def create_general_feature(project_machine_name)
   system %{ #{ si_command } }
   system %{ drush en #{ feature_name } -y }
   FileUtils.cd "../.."
+end
+
+def create_patches_directory
+  FileUtils.mkdir_p "#{ PROJECT_NAME }/www/sites/all/patches"
+  FileUtils.cp "#{ SOURCE_PATH }/patches_readme.md", "#{ PROJECT_NAME }/www/sites/all/patches/README.md"
 end
 
 def setup_git
