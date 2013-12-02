@@ -107,7 +107,7 @@ end
 def copy_subtheme(project_machine_name)
   puts "Create Omega subtheme..."
   FileUtils.cd "#{ PROJECT_NAME }/www"
-  subtheme_command = "drush omega-subtheme #{ project_machine_name }_theme --enable --set-default"
+  subtheme_command = "drush omega-subtheme #{ project_machine_name }_theme --enable --set-default --with-libraries"
   system %{ #{ subtheme_command } }
   FileUtils.cp "#{ SOURCE_PATH }/gitignore_theme.txt", "sites/all/themes/#{ project_machine_name }_theme/.gitignore"
   FileUtils.cd "../.."
