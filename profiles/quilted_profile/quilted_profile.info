@@ -46,6 +46,7 @@ dependencies[] = entityreference
 dependencies[] = features
 dependencies[] = field_group
 dependencies[] = file_entity
+dependencies[] = fitvids
 dependencies[] = globalredirect
 dependencies[] = jquery_update
 dependencies[] = libraries

@@ -11,6 +11,7 @@ Note: Version numbers and commit hashes indicate the most recent version tested 
 - [Display Suite](https://drupal.org/project/ds)
 - [Features](https://drupal.org/project/features)
 - [File Entity (7.x-2.0-alpha2)](https://drupal.org/project/features)
+- [Fitvids (7.x-1.14)](https://drupal.org/project/fitvids)
 - [Media (7.x-2.x: e2625ed)](https://drupal.org/project/media)
 - Media Bulk Upload (bundled with Media)
 - Media Internet (bundled with Media)

@@ -82,6 +82,7 @@ projects[] = xmlsitemap
 ; --------
 projects[breakpoints] = 1.1
 projects[file_entity] = 2.0-alpha2
+projects[fitvids] = 1.14
 projects[media][download][revision] = e2625ed
 projects[media][download][branch] = 7.x-2.x
 projects[media_responsive] = 1.0-alpha1
