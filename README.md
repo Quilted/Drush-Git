@@ -6,7 +6,7 @@ About
 * Downloads Drupal core and contributed modules based on a drush makefile
 * Creates a .gitignore file
 * Creates development and production features
-* Creates an initial Quilted subtheme
+* Creates an initial subtheme
 * Installs Drupal based on an install profile
 * Creates general feature with all permissions and basic variables included
 * Initializes a new git repo
@@ -18,8 +18,7 @@ Requirements
 * Git
 * [Rubygems](http://rubygems.org/pages/download)
 * [Bundler](http://gembundler.com/)
-* [Drush 5 (latest version!)](http://drupal.org/project/drush)
-* [Drush DGB](github.com/scor/dgb)
+* [Drush](http://drupal.org/project/drush)
 
 
 Installation
@@ -50,9 +49,7 @@ Example
 Optional Flags
 ==============
 
-* makefile: Defaults to Drupal 7 with selected contributed modules
-* gitignore: Defaults to cached files and settings.php, but does not ignore user generated files
-* install_profile: Defaults to custom Quilted install profile
+* gitignore
 * db_name: Defaults to project_name
 
 
@@ -65,20 +62,11 @@ Optional Follow Up
 * Set up [Masquerade](http://drupal.org/project/masquerade) user and move Masquerade links from Navigation menu to Management menu
 
 
-
 Troubleshooting
 =================
 
+<pre>
 ...'gem_original_require': no such file to load -- bundler/setup (LoadError)
-____________________________________________________
-
+</pre>
 You don't have bundler installed. Try running:
     gem install bundler
-
-
-=======
-
-TODO
-=================
-
-* Add more graceful endings if a requirement such as drush or git isn't available

@@ -60,6 +60,7 @@ projects[] = entity
 projects[] = entityreference
 projects[] = features
 projects[] = field_group
+projects[] = file_entity
 projects[] = globalredirect
 projects[] = jquery_update
 projects[] = link
