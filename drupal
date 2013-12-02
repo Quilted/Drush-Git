@@ -190,7 +190,11 @@ def create_general_feature(project_machine_name)
     'node:page',
 
     # Roles
-    'user_role:administrator']
+    'user_role:administrator',
+
+    # Context
+    'context:internal',
+    'context:sitewide']
 
   # Permissions
   permissions = [
