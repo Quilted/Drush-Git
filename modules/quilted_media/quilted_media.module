@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Quilted Media feature.
+ */
+
+include_once 'quilted_media.features.inc';
