@@ -10,7 +10,7 @@
 function quilted_dev_user_default_permissions() {
   $permissions = array();
 
-  // Exported permission: administer shield.
+  // Exported permission: 'administer shield'.
   $permissions['administer shield'] = array(
     'name' => 'administer shield',
     'roles' => array(

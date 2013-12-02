@@ -5,7 +5,7 @@
  */
 
 /**
- * Implementation of hook_strongarm().
+ * Implements hook_strongarm().
  */
 function quilted_prod_strongarm() {
   $export = array();
@@ -107,6 +107,13 @@ function quilted_prod_strongarm() {
   $strongarm->name = 'page_cache_maximum_age';
   $strongarm->value = '0';
   $export['page_cache_maximum_age'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'page_compression';
+  $strongarm->value = 0;
+  $export['page_compression'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
