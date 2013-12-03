@@ -109,15 +109,6 @@ def copy_features
   FileUtils.cp_r "#{ SOURCE_PATH }/modules/.", "#{ path }"
 end
 
-def create_subtheme(project_machine_name)
-  puts "Create Omega subtheme..."
-  FileUtils.cd "#{ PROJECT_NAME }/www"
-  subtheme_command = "drush omega-subtheme #{ project_machine_name }_theme --enable --set-default --with-libraries"
-  system %{ #{ subtheme_command } }
-  FileUtils.cp "#{ SOURCE_PATH }/gitignore_theme.txt", "sites/all/themes/#{ project_machine_name }_theme/.gitignore"
-  FileUtils.cd "../.."
-end
-
 def install_drupal(install_profile, db_user, db_password, drupal_email)
   puts "Install Drupal..."
   admin_password = SecureRandom.base64
@@ -125,6 +116,15 @@ def install_drupal(install_profile, db_user, db_password, drupal_email)
 
   FileUtils.cd "#{ PROJECT_NAME }/www"
   system %{ #{ si_command } }
+  FileUtils.cd "../.."
+end
+
+def create_subtheme(project_machine_name)
+  puts "Create Omega subtheme..."
+  FileUtils.cd "#{ PROJECT_NAME }/www"
+  subtheme_command = "drush omega-subtheme #{ project_machine_name }_theme --enable --set-default --with-libraries"
+  system %{ #{ subtheme_command } }
+  FileUtils.cp "#{ SOURCE_PATH }/gitignore_theme.txt", "sites/all/themes/#{ project_machine_name }_theme/.gitignore"
   FileUtils.cd "../.."
 end
 
