@@ -62,6 +62,7 @@ dependencies[] = media_youtube
 dependencies[] = modernizr
 dependencies[] = navigation404
 dependencies[] = pathauto
+dependencies[] = picture
 dependencies[] = redirect
 dependencies[] = strongarm
 dependencies[] = textformatter
@@ -79,5 +80,6 @@ dependencies[] = xmlsitemap_custom
 dependencies[] = xmlsitemap_node
 
 dependencies[] = quilted_dev
+dependencies[] = quilted_responsive
 
 files[] = quilted_profile.profile

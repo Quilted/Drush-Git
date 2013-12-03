@@ -104,16 +104,6 @@ function quilted_responsive_user_default_permissions() {
     'module' => 'file_entity',
   );
 
-  // Exported permission: 'import media'.
-  $permissions['import media'] = array(
-    'name' => 'import media',
-    'roles' => array(
-      'administrator' => 'administrator',
-      'editor' => 'editor',
-    ),
-    'module' => 'media',
-  );
-
   // Exported permission: 'view files'.
   $permissions['view files'] = array(
     'name' => 'view files',
