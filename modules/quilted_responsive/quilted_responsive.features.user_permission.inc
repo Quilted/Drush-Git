@@ -16,7 +16,6 @@ function quilted_responsive_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'authenticated user' => 'authenticated user',
-      'editor' => 'editor',
     ),
     'module' => 'media_internet',
   );
@@ -99,7 +98,6 @@ function quilted_responsive_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'authenticated user' => 'authenticated user',
-      'editor' => 'editor',
     ),
     'module' => 'file_entity',
   );
@@ -111,10 +109,6 @@ function quilted_responsive_user_default_permissions() {
       'administrator' => 'administrator',
       'anonymous user' => 'anonymous user',
       'authenticated user' => 'authenticated user',
-      'editor' => 'editor',
-      'jam site organizer' => 'jam site organizer',
-      'jammer' => 'jammer',
-      'regional organizer' => 'regional organizer',
     ),
     'module' => 'file_entity',
   );
