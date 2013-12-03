@@ -16,21 +16,25 @@ function quilted_responsive_default_picture_mapping() {
   $picture_mapping->machine_name = 'responsive_large';
   $picture_mapping->breakpoint_group = 'responsive_large';
   $picture_mapping->mapping = array(
-    'breakpoints.theme.globalgamejam_theme.default' => array(
-      '1x' => 'media_responsive_widest',
-      '2x' => 'media_responsive_widest',
+    'module.quilted_responsive.default' => array(
+      '1x' => 'responsive_default',
+      '2x' => 'responsive_default_2x',
     ),
-    'breakpoints.theme.globalgamejam_theme.narrow' => array(
+    'module.quilted_responsive.mini' => array(
+      '1x' => 'responsive_mini',
+      '2x' => 'responsive_mini_2x',
+    ),
+    'module.quilted_responsive.narrow' => array(
       '1x' => 'responsive_large__narrow',
       '2x' => 'responsive_large__narrow_2x',
     ),
-    'breakpoints.theme.globalgamejam_theme.normal' => array(
+    'module.quilted_responsive.normal' => array(
       '1x' => 'responsive_large__normal',
       '2x' => 'responsive_large__normal_2x',
     ),
-    'breakpoints.theme.globalgamejam_theme.wide' => array(
-      '1x' => 'responsive_large__wide',
-      '2x' => 'responsive_large__wide_2x',
+    'module.quilted_responsive.wide' => array(
+      '1x' => 'responsive_medium__wide',
+      '2x' => 'responsive_medium__wide_2x',
     ),
   );
   $export['responsive_large'] = $picture_mapping;
@@ -41,19 +45,23 @@ function quilted_responsive_default_picture_mapping() {
   $picture_mapping->machine_name = 'responsive_medium';
   $picture_mapping->breakpoint_group = 'responsive_medium';
   $picture_mapping->mapping = array(
-    'breakpoints.theme.globalgamejam_theme.default' => array(
-      '1x' => 'media_responsive_widest',
-      '2x' => 'media_responsive_widest',
+    'module.quilted_responsive.default' => array(
+      '1x' => 'responsive_default',
+      '2x' => 'responsive_default_2x',
     ),
-    'breakpoints.theme.globalgamejam_theme.narrow' => array(
+    'module.quilted_responsive.mini' => array(
+      '1x' => 'responsive_mini',
+      '2x' => 'responsive_mini_2x',
+    ),
+    'module.quilted_responsive.narrow' => array(
       '1x' => 'responsive_medium__narrow',
       '2x' => 'responsive_medium__narrow_2x',
     ),
-    'breakpoints.theme.globalgamejam_theme.normal' => array(
+    'module.quilted_responsive.normal' => array(
       '1x' => 'responsive_medium__normal',
       '2x' => 'responsive_medium__normal_2x',
     ),
-    'breakpoints.theme.globalgamejam_theme.wide' => array(
+    'module.quilted_responsive.wide' => array(
       '1x' => 'responsive_medium__wide',
       '2x' => 'responsive_medium__wide_2x',
     ),
@@ -66,19 +74,23 @@ function quilted_responsive_default_picture_mapping() {
   $picture_mapping->machine_name = 'responsive_small';
   $picture_mapping->breakpoint_group = 'responsive_small';
   $picture_mapping->mapping = array(
-    'breakpoints.theme.globalgamejam_theme.default' => array(
-      '1x' => 'media_responsive_widest',
-      '2x' => 'media_responsive_widest',
+    'module.quilted_responsive.default' => array(
+      '1x' => 'responsive_default',
+      '2x' => 'responsive_default_2x',
     ),
-    'breakpoints.theme.globalgamejam_theme.narrow' => array(
+    'module.quilted_responsive.mini' => array(
+      '1x' => 'responsive_mini',
+      '2x' => 'responsive_mini_2x',
+    ),
+    'module.quilted_responsive.narrow' => array(
       '1x' => 'responsive_small__narrow',
       '2x' => 'responsive_small__narrow_2x',
     ),
-    'breakpoints.theme.globalgamejam_theme.normal' => array(
+    'module.quilted_responsive.normal' => array(
       '1x' => 'responsive_small__normal',
-      '2x' => 'responsive_medium__normal_2x',
+      '2x' => 'responsive_small__normal_2x',
     ),
-    'breakpoints.theme.globalgamejam_theme.wide' => array(
+    'module.quilted_responsive.wide' => array(
       '1x' => 'responsive_small__wide',
       '2x' => 'responsive_small__wide_2x',
     ),
