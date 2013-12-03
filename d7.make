@@ -96,6 +96,7 @@ projects[wysiwyg][download][revision] = 31840cbf
 projects[wysiwyg][download][branch] = 7.x-2.x
 projects[] = wysiwyg_filter
 projects[] = image_dimensions
+projects[] = hires_images
 
 
 ; Themes

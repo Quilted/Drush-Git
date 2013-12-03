@@ -11,6 +11,7 @@ dependencies[] = fitvids
 dependencies[] = flexslider
 dependencies[] = image
 dependencies[] = image_dimensions
+dependencies[] = hires_images
 dependencies[] = media
 dependencies[] = media_internet
 dependencies[] = media_soundcloud
