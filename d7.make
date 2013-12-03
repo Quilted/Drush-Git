@@ -107,6 +107,15 @@ projects[] = omega
 ; Libraries
 ; ---------
 projects[] = libraries
-libraries[ckeditor][download][type] = "get"
+libraries[ckeditor][download][type] = get
 libraries[ckeditor][download][url] = "http://download.cksource.com/CKEditor/CKEditor/CKEditor%204.1.2/ckeditor_4.1.2_full.zip"
-libraries[ckeditor][destination] = "libraries"
+; libraries[ckeditor][download][url] = "http://download.cksource.com/CKEditor/CKEditor/CKEditor%204.3/ckeditor_4.3_full.zip"
+libraries[ckeditor][destination] = libraries
+
+libraries[fitvids][download][type] = git
+libraries[fitvids][download][url] = https://github.com/davatron5000/FitVids.js
+libraries[fitvids][destination] = libraries
+
+libraries[flexslider][download][type] = git
+libraries[flexslider][download][url] = https://github.com/woothemes/FlexSlider.git
+libraries[flexslider][destination] = libraries
