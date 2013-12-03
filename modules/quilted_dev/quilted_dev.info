@@ -7,6 +7,7 @@ dependencies[] = ctools
 dependencies[] = devel
 dependencies[] = diff
 dependencies[] = features
+dependencies[] = maillog
 dependencies[] = masquerade
 dependencies[] = shield
 dependencies[] = strongarm
