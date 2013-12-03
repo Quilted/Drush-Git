@@ -286,7 +286,6 @@ def create_patches_directory
   path = "#{ PROJECT_NAME }/www/sites/all/patches"
   FileUtils.mkdir_p path
   FileUtils.cp_r "#{ SOURCE_PATH }/patches/.", "#{ path }"
-  # @todo apply patches
 end
 
 def enable_quilted_responsive
