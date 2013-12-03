@@ -130,41 +130,4 @@ function quilted_profile_setup_contexts() {
   );
   $context->condition_mode = 0;
   context_save($context);
-
-  // Debug context.
-  $context = new stdClass();
-  $context->disabled = FALSE;
-  $context->api_version = 3;
-  $context->name = 'debug';
-  $context->description = 'Debug (excludes admin pages and homepage)';
-  $context->tag = '';
-  $context->conditions = array(
-    'path' => array(
-      'values' => array(
-        '*' => '*',
-        '~<front>' => '~<front>',
-        '~batch' => '~batch',
-        '~admin' => '~admin',
-        '~admin/*' => '~admin/*',
-        '~node/*/delete' => '~node/*/delete',
-        '~node/*/devel' => '~node/*/devel',
-        '~media/browser' => '~media/browser',
-        '~media/*/format-form' => '~media/*/format-form',
-      ),
-    ),
-  );
-  $context->reactions = array(
-    'block' => array(
-      'blocks' => array(
-        'devel-execute_php' => array(
-          'module' => 'devel',
-          'delta' => 'execute_php',
-          'region' => 'content',
-          'weight' => '30',
-        ),
-      ),
-    ),
-  );
-  $context->condition_mode = 0;
-  context_save($context);
 }
