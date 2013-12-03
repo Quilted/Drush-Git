@@ -33,8 +33,8 @@ function quilted_responsive_default_picture_mapping() {
       '2x' => 'responsive_large__normal_2x',
     ),
     'module.quilted_responsive.wide' => array(
-      '1x' => 'responsive_medium__wide',
-      '2x' => 'responsive_medium__wide_2x',
+      '1x' => 'responsive_large__wide',
+      '2x' => 'responsive_large__wide_2x',
     ),
   );
   $export['responsive_large'] = $picture_mapping;
