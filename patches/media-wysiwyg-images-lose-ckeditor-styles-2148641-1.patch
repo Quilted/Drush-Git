@@ -1,0 +1,12 @@
+diff --git a/js/media.popups.js b/js/media.popups.js
+index 46af675..9b2d634 100644
+--- a/js/media.popups.js
++++ b/js/media.popups.js
+@@ -181,6 +181,7 @@ Drupal.media.popups.mediaStyleSelector = function (mediaFile, onSelect, options)
+   dialogOptions.buttons[ok] = function () {
+ 
+     var formattedMedia = this.contentWindow.Drupal.media.formatForm.getFormattedMedia();
++    formattedMedia.options = $.extend({}, mediaFile.attributes, formattedMedia.options);
+     if (!formattedMedia) {
+       alert(notSelected);
+       return;

@@ -179,17 +179,7 @@ def create_general_feature(project_machine_name)
     'field_instance:node-page-body',
 
     # Filters
-    'filter:full_html_no_filters',
-    'filter:filtered_html',
-    'filter:full_html',
-    'filter:plain_text',
     'filter:ds_code',
-
-    # Image
-    'image:thumbnail',
-    'image:medium',
-    'image:large',
-    'image:square_thumbnail',
 
     # Node
     'node:page',
@@ -206,12 +196,6 @@ def create_general_feature(project_machine_name)
     'user_permission:view advanced help topic',
     'user_permission:view advanced help popup',
     'user_permission:view advanced help index',
-    'user_permission:access backup and migrate',
-    'user_permission:perform backup',
-    'user_permission:access backup files',
-    'user_permission:delete backup files',
-    'user_permission:restore from backup',
-    'user_permission:administer backup and migrate',
     'user_permission:show format tips',
     'user_permission:show more format tips link',
     'user_permission:show format selection for node',
@@ -231,16 +215,7 @@ def create_general_feature(project_machine_name)
     'user_permission:administer features',
     'user_permission:manage features',
     'user_permission:administer filters',
-    'user_permission:use text format full_html_no_filters',
-    'user_permission:use text format filtered_html',
-    'user_permission:use text format full_html',
     'user_permission:use text format ds_code',
-    'user_permission:administer image styles',
-    'user_permission:administer media',
-    'user_permission:import media',
-    'user_permission:view media',
-    'user_permission:edit media',
-    'user_permission:add media from remote sources',
     'user_permission:administer menu',
     'user_permission:bypass node access',
     'user_permission:administer content types',
