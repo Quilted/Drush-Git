@@ -12,10 +12,11 @@ function quilted_responsive_default_breakpoint_group() {
 
   // Breakpoints.
   $breakpoints = array();
-  $breakpoints[] = 'breakpoints.theme.globalgamejam_theme.default';
-  $breakpoints[] = 'breakpoints.theme.globalgamejam_theme.narrow';
-  $breakpoints[] = 'breakpoints.theme.globalgamejam_theme.normal';
-  $breakpoints[] = 'breakpoints.theme.globalgamejam_theme.wide';
+  $breakpoints[] = 'module.quilted_responsive.default';
+  $breakpoints[] = 'module.quilted_responsive.mini';
+  $breakpoints[] = 'module.quilted_responsive.narrow';
+  $breakpoints[] = 'module.quilted_responsive.normal';
+  $breakpoints[] = 'module.quilted_responsive.wide';
 
   // Breakpoint group.
   $breakpoint_group = new stdClass();
@@ -30,10 +31,11 @@ function quilted_responsive_default_breakpoint_group() {
 
   // Breakpoints.
   $breakpoints = array();
-  $breakpoints[] = 'breakpoints.theme.globalgamejam_theme.default';
-  $breakpoints[] = 'breakpoints.theme.globalgamejam_theme.narrow';
-  $breakpoints[] = 'breakpoints.theme.globalgamejam_theme.normal';
-  $breakpoints[] = 'breakpoints.theme.globalgamejam_theme.wide';
+  $breakpoints[] = 'module.quilted_responsive.default';
+  $breakpoints[] = 'module.quilted_responsive.mini';
+  $breakpoints[] = 'module.quilted_responsive.narrow';
+  $breakpoints[] = 'module.quilted_responsive.normal';
+  $breakpoints[] = 'module.quilted_responsive.wide';
 
   // Breakpoint group.
   $breakpoint_group = new stdClass();
@@ -48,10 +50,11 @@ function quilted_responsive_default_breakpoint_group() {
 
   // Breakpoints.
   $breakpoints = array();
-  $breakpoints[] = 'breakpoints.theme.globalgamejam_theme.default';
-  $breakpoints[] = 'breakpoints.theme.globalgamejam_theme.narrow';
-  $breakpoints[] = 'breakpoints.theme.globalgamejam_theme.normal';
-  $breakpoints[] = 'breakpoints.theme.globalgamejam_theme.wide';
+  $breakpoints[] = 'module.quilted_responsive.default';
+  $breakpoints[] = 'module.quilted_responsive.mini';
+  $breakpoints[] = 'module.quilted_responsive.narrow';
+  $breakpoints[] = 'module.quilted_responsive.normal';
+  $breakpoints[] = 'module.quilted_responsive.wide';
 
   // Breakpoint group.
   $breakpoint_group = new stdClass();
