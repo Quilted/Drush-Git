@@ -1,21 +1,21 @@
 ; ----------------
 ; Based on generated makefile from http://drushmake.me
 ; ----------------
-  
+
 ; Core version
 ; ------------
 ; Each makefile should begin by declaring the core version of Drupal that all
 ; projects should be compatible with.
-  
+
 core = 7.x
-  
+
 ; API version
 ; ------------
 ; Every makefile needs to declare its Drush Make API version. This version of
 ; drush make uses API version `2`.
-  
+
 api = 2
-  
+
 ; Core project
 ; ------------
 ; In order for your makefile to generate a full Drupal site, you must include
@@ -80,36 +80,36 @@ projects[] = xmlsitemap
 
 ; Media Suite
 ; --------
+projects[] = hires_images
+projects[] = image_dimensions
+projects[] = wysiwyg_filter
+
 projects[breakpoints] = 1.1
-projects[file_entity] = 2.0-alpha2
+projects[file_entity] = 2.0-alpha3
 projects[fitvids] = 1.14
 projects[flexslider] = 2.0-alpha3
-projects[media][download][revision] = e2625ed
-projects[media][download][branch] = 7.x-2.x
 projects[media_soundcloud] = 1.0
-projects[media_youtube][download][revision] = 5faa00c1
-projects[media_youtube][download][branch] = 7.x-2.x
-projects[retina_images] = 1.0-beta4
-projects[picture][download][revision] = 3d9fe6c
+projects[media_youtube] = 2.0-rc4
+
+projects[media][download][revision] = 042f84f
+projects[media][download][branch] = 7.x-2.x
+projects[picture][download][revision] = 18b94b9
 projects[picture][download][branch] = 7.x-1.x
-projects[wysiwyg][download][revision] = 31840cbf
+projects[wysiwyg][download][revision] = ee64524
 projects[wysiwyg][download][branch] = 7.x-2.x
-projects[] = wysiwyg_filter
-projects[] = image_dimensions
-projects[] = hires_images
 
 
 ; Themes
 ; --------
 projects[] = omega
 
-  
+
 ; Libraries
 ; ---------
 projects[] = libraries
 libraries[ckeditor][download][type] = get
-libraries[ckeditor][download][url] = "http://download.cksource.com/CKEditor/CKEditor/CKEditor%204.1.2/ckeditor_4.1.2_full.zip"
-; libraries[ckeditor][download][url] = "http://download.cksource.com/CKEditor/CKEditor/CKEditor%204.3/ckeditor_4.3_full.zip"
+; libraries[ckeditor][download][url] = "http://download.cksource.com/CKEditor/CKEditor/CKEditor%204.1.2/ckeditor_4.1.2_full.zip"
+libraries[ckeditor][download][url] = "http://download.cksource.com/CKEditor/CKEditor/CKEditor%204.3/ckeditor_4.3_full.zip"
 libraries[ckeditor][destination] = libraries
 
 libraries[fitvids][download][type] = git
