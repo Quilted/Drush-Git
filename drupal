@@ -46,6 +46,7 @@ command :setup do |c|
       create_subtheme project_machine_name
       create_general_feature project_machine_name
       create_patches_directory
+      enable_quilted_responsive
       setup_git
     end
   end
@@ -286,6 +287,13 @@ def create_patches_directory
   FileUtils.mkdir_p path
   FileUtils.cp_r "#{ SOURCE_PATH }/patches/.", "#{ path }"
   # @todo apply patches
+end
+
+def enable_quilted_responsive
+  puts "Enable quilted_responsive feature..."
+  FileUtils.cd "#{ PROJECT_NAME }/www"
+  system %{ drush en quilted_responsive -y }
+  FileUtils.cd "../.."
 end
 
 def setup_git
