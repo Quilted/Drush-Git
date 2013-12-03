@@ -12,6 +12,7 @@ include_once('quilted_dev.features.inc');
 function quilted_dev_enable() {
   $modules = array(
     'googleanalytics',
+    'backup_migrate'
   );
   module_disable($modules);
 }
