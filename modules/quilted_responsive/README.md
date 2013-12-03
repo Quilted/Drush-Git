@@ -28,24 +28,30 @@ Note: Version numbers and commit hashes indicate the most recent version tested 
 
 ## Expected Behavior
 
-- File fields that you can use picture group field formatter
-- WYSIWYG insert using media and be able to choose a picture group
-- Retain the view mode selected for a WYSIWYG-inserted image
-- WYSIWYG-inserted images should show a preview on the edit form
-- Choose picture group for a view mode
-- Be able to set title and alt attributes for image fields
-- Be able to set title and alt attributes for WYSIWYG-inserted images
-- Be able to edit title and alt attributes for existing image fields
-- Be able to edit title and alt attributes for existing WYSIWYG-inserted images
-- Be able to edit image attributes (like alignment) for WYSIWYG-inserted images
-- Be able to make an image style that uses 100% width and have it work for:
-  - Image field using a picture group field formatter
-  - WYSIWYG-inserted images that use a picture group
-- Be able to make a retina image styles and have it work for:
-  - Image field using a picture group field formatter
-  - WYSIWYG-inserted images that use a picture group
-- Be able to insert video as a file field that responds
+### Basic
+- Create an image field and use the picture group field formatter
+- Insert an image using the WYSIWYG and be able to choose a file view mode
+- Create a file view mode that uses the picture group field formatter
 
+### Image fields
+- Set title and alt attributes
+- Edit title and alt attributes
+- Use an image style that has 100% width
+- Use an image style that has a retina image effect
+- Preview the image on the edit form
+
+### WYSIWYG-inserted images
+- Set title and alt attributes
+- Edit title and alt attributes
+- Use an image style that has 100% width
+- Use an image style that has a retina image effect
+- Preview the image on the edit form
+- Retain the view mode when editing again (in the form and in the database)
+- Edit image attributes (such as alignment)
+
+### Videos
+- Be able to insert video as a file field that responds
+- Be able to insert video using the WYSIWYG that responds
 
 
 ## Known bugs & Open Issues
