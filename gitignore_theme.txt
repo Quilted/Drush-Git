@@ -4,8 +4,16 @@ node_modules
 # We absolutely don't want to have the .sass-cache in git.
 .sass-cache
 
-# Exclude Compiled CSS
-css
-
 # Exclude image sprites
 images/image-replacement-*.png
+
+# Ignore the Gemfile.lock.
+Gemfile.lock
+
+# Ignore css.
+css
+css/*
+
+# But not library css.
+!libraries/*/css
+!libraries/*/css/*
