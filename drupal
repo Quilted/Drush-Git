@@ -123,6 +123,7 @@ end
 def create_subtheme(project_machine_name)
   puts "Create Omega subtheme..."
   FileUtils.cd "#{ PROJECT_NAME }/www"
+  system %{ drush en omega -y; drush cc all }
   subtheme_command = "drush omega-subtheme #{ project_machine_name }_theme --enable --set-default --with-libraries"
   system %{ #{ subtheme_command } }
   FileUtils.cp "#{ SOURCE_PATH }/gitignore_theme.txt", "sites/all/themes/#{ project_machine_name }_theme/.gitignore"
