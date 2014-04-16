@@ -66,7 +66,7 @@ def sanitize_filename(filename)
 end
 
 def create_file_structure
-  puts 'Setting up file structure...'
+  puts '===> Setting up file structure...'
   FileUtils.mkdir_p "#{ PROJECT_NAME }/databases"
   FileUtils.mkdir_p "#{ PROJECT_NAME }/private_files"
   FileUtils.touch "#{ PROJECT_NAME }/private_files/PLACEHOLDER.md"
@@ -79,39 +79,39 @@ def create_file_structure
 end
 
 def create_drushrc
-  puts "Setting up drushrc.php..."
+  puts "===> Setting up drushrc.php..."
   FileUtils.cp "#{ SOURCE_PATH }/dgb/example-dgb.drushrc.php", "#{ PROJECT_NAME }/drushrc.php"
 end
 
 def create_gitignore(gitignore)
-  puts "Setting up .gitignore..."
+  puts "===> Setting up .gitignore..."
   FileUtils.cp "#{ gitignore }", "#{ PROJECT_NAME }/.gitignore"
 end
 
 def download_drupal(makefile)
-  puts "Download Drupal and modules..."
+  puts "===> Downloading Drupal and modules..."
   system %{ drush make --prepare-install #{ makefile } #{ PROJECT_NAME }/www }
 end
 
 def create_drushrc_symlink
-  puts "Create drushrc.php symlink..."
+  puts "===> Creating drushrc.php symlink..."
   File.symlink("../drushrc.php", "#{ PROJECT_NAME }/www/drushrc.php")
 end
 
 def copy_install_profile
-  puts  "Copy install profile..."
+  puts "===> Copying install profile..."
   FileUtils.cp_r "#{ SOURCE_PATH }/profiles/quilted_profile", "#{ PROJECT_NAME }/www/profiles/quilted_profile"
 end
 
 def copy_features
-  puts  "Copy custom features..."
+  puts "===> Copying custom features..."
   path = "#{ PROJECT_NAME }/www/sites/all/modules/custom"
   FileUtils.mkdir_p path
   FileUtils.cp_r "#{ SOURCE_PATH }/modules/.", "#{ path }"
 end
 
 def install_drupal(install_profile, db_user, db_password, drupal_email)
-  puts "Install Drupal..."
+  puts "===> Installing Drupal..."
   admin_password = SecureRandom.base64
   si_command = "drush si #{ install_profile } --site-name=#{ PROJECT_NAME } --site-mail=#{ drupal_email } --account-name=admin --account-pass=#{ admin_password } --account-mail=#{ drupal_email } --db-url=mysql://#{ db_user }:#{ db_password }@localhost:/#{ PROJECT_NAME } -y"
 
@@ -121,7 +121,7 @@ def install_drupal(install_profile, db_user, db_password, drupal_email)
 end
 
 def create_subtheme(project_machine_name)
-  puts "Create Omega subtheme..."
+  puts "===> Creating Omega subtheme..."
   FileUtils.cd "#{ PROJECT_NAME }/www"
   system %{ drush en omega -y; drush cc all }
   subtheme_command = "drush omega-subtheme #{ project_machine_name }_theme --enable --set-default --with-libraries"
@@ -131,7 +131,7 @@ def create_subtheme(project_machine_name)
 end
 
 def create_general_feature(project_machine_name)
-  puts "Create general feature..."
+  puts "===> Creating general feature..."
   components = [
     # Variables
     'variable:admin_theme',
@@ -283,26 +283,26 @@ def create_general_feature(project_machine_name)
 end
 
 def create_patches_directory
-  puts  "Copy patches..."
+  puts "===> Copying patches..."
   path = "#{ PROJECT_NAME }/www/sites/all/patches"
   FileUtils.mkdir_p path
   FileUtils.cp_r "#{ SOURCE_PATH }/patches/.", "#{ path }"
 end
 
 def enable_quilted_responsive
-  puts "Enable quilted_responsive feature..."
+  puts "===> Enabling quilted_responsive feature..."
   FileUtils.cd "#{ PROJECT_NAME }/www"
   system %{ drush en quilted_responsive -y }
   FileUtils.cd "../.."
 end
 
 def setup_git
-  puts "Setting up git repo..."
+  puts "===> Setting up git repo..."
   FileUtils.cd PROJECT_NAME
   system %{ git init; git add -A; git commit --quiet -m "Initial commit." }
   FileUtils.cd "www"
   system %{ drush dgb-backup --m="Initial database backup." }
   FileUtils.cd "../.."
-  puts "Finished setting up git."
+  puts "===> Finished setting up git."
 end
 
