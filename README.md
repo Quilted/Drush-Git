@@ -19,6 +19,7 @@ Requirements
 * [Rubygems](http://rubygems.org/pages/download)
 * [Bundler](http://gembundler.com/)
 * [Drush](http://drupal.org/project/drush)
+* [DGB](http://github.com/scor/dgb) installed in ~/.drush
 
 
 Installation
