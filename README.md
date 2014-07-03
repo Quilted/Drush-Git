@@ -28,6 +28,7 @@ After cloning this git repository, be sure to run from inside the drush-git repo
 
     git submodule init
     git submodule update
+    bundle install
 
 Run
 ====
