@@ -9,7 +9,7 @@
 
 ### Variable
 - group-variables-in-fieldsets-1897462-1.patch!
-  - Last checked Dec 1, 2013.
+  - Last checked Sept 15, 2014.
   - See issue [#1897462: Group variables inside fieldsets](https://drupal.org/node/1897462).
   - **Problem:** Variable groups don't display as fieldsets.
   - **Patch:** Allows variables organized as groups to be displayed as fieldsets.
