@@ -17,3 +17,29 @@ function quilted_responsive_wysiwyg_editor_settings_alter(&$settings, $context) 
     $settings['allowedContent'] = TRUE;
   }
 }
+
+/**
+ * Implements hook_form_MEDIA_WYSIWYG_FORMAT_FORM_alter().
+ */
+function quilted_responsive_form_media_wysiwyg_format_form_alter(&$form, &$form_state, $form_id) {
+  unset($form['options']['fields']['field_file_image_title_text']);
+
+  if (preg_match('/^video\//', $form['#media']->filemime)) {
+    $allowed_responsive_picture_groups = array(
+      'responsive_large',
+    );
+  }
+  else {
+    $allowed_responsive_picture_groups = array(
+      'responsive_large',
+      'responsive_medium',
+      'responsive_small',
+    );
+  }
+
+  foreach ($form['options']['format']['#options'] as $key => $option) {
+    if (!in_array($key, $allowed_responsive_picture_groups)) {
+      unset($form['options']['format']['#options'][$key]);
+    }
+  }
+}
