@@ -66,6 +66,7 @@ dependencies[] = picture
 dependencies[] = redirect
 dependencies[] = strongarm
 dependencies[] = textformatter
+dependencies[] = textformatter_contrib
 dependencies[] = title
 dependencies[] = token
 dependencies[] = transliteration
