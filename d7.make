@@ -30,9 +30,10 @@ projects[] = drupal
 ; --------
 projects[] = devel
 projects[] = diff
+projects[] = maillog
 projects[] = masquerade
 projects[] = shield
-projects[] = maillog
+projects[] = styleguide
 
 
 ; Modules: Production

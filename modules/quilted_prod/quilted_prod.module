@@ -14,6 +14,8 @@ function quilted_prod_enable() {
     'devel',
     'shield',
     'maillog',
+    'masquerade',
+    'styleguide'
   );
   module_disable($modules);
 }

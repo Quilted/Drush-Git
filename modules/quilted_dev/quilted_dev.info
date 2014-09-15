@@ -12,6 +12,7 @@ dependencies[] = maillog
 dependencies[] = masquerade
 dependencies[] = shield
 dependencies[] = strongarm
+dependencies[] = styleguide
 features[context][] = debug
 features[ctools][] = context:context:3
 features[ctools][] = strongarm:strongarm:1
