@@ -2,7 +2,7 @@
 
 ### Features
 - features-alter-hooks-always-overridden-766264-23.patch
-  - Last checked Dec 1, 2013.
+  - Last checked Sept 3, 2014.
   - See issue [#766264: Alter hooks causing status to always be overridden](https://drupal.org/node/766264).
   - **Problem:** Most recent versions of file_entity and media_youtube implement hook_file_default_displays_alter(). The defaults appear as always overridden.
   - **Patch:** Only shows feature components as overridden if they are explicitly declared and ignores alters.
