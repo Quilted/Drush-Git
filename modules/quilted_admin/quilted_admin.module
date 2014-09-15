@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Quilted Admin feature.
+ */
+
+include_once 'quilted_admin.features.inc';

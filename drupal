@@ -47,6 +47,7 @@ command :setup do |c|
       create_general_feature project_machine_name
       create_patches_directory
       enable_quilted_responsive
+      enable_quilted_admin
       setup_git
     end
   end
@@ -104,7 +105,7 @@ def copy_install_profile
 end
 
 def copy_features
-  puts "===> Copying custom features..."
+  puts "===> Copying custom modules..."
   path = "#{ PROJECT_NAME }/www/sites/all/modules/custom"
   FileUtils.mkdir_p path
   FileUtils.cp_r "#{ SOURCE_PATH }/modules/.", "#{ path }"
@@ -290,6 +291,13 @@ def enable_quilted_responsive
   puts "===> Enabling quilted_responsive feature..."
   FileUtils.cd "#{ PROJECT_NAME }/www"
   system %{ drush en quilted_responsive -y }
+  FileUtils.cd "../.."
+end
+
+def enable_quilted_admin
+  puts "===> Enabling quilted_admin feature..."
+  FileUtils.cd "#{ PROJECT_NAME }/www"
+  system %{ drush en quilted_admin -y; drush fr quilted_admin -y --force }
   FileUtils.cd "../.."
 end
 
