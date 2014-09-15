@@ -16,7 +16,7 @@
 
 ### Media
 - media-wysiwyg-images-lose-ckeditor-styles-2148641-1.patch
-  - Last checked Dec 3, 2013.
+  - Last checked Sept 15, 2014.
   - See issue [#2148641: WYSIWYG-inserted images lose ckeditor styles](https://drupal.org/node/2148641).
   - **Problem:** Attributes added to WYSIWYG-inserted images using the ckeditor image editor, such as alignment, don't get saved.
   - **Patch:** Fixes this.
