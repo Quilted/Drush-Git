@@ -173,8 +173,6 @@ def create_general_feature(project_machine_name)
     'variable:theme_default',
     'variable:user_admin_role',
     'variable:user_register',
-    'variable:xmlsitemap_generated_last',
-    'variable:xmlsitemap_regenerate_needed',
 
     # Fields
     'field_instance:node-page-body',
