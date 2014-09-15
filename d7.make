@@ -84,10 +84,10 @@ projects[] = xmlsitemap
 projects[] = hires_images
 projects[] = image_dimensions
 projects[] = wysiwyg_filter
+projects[] = fitvids
 
 projects[breakpoints] = 1.1
 projects[file_entity] = 2.0-alpha3
-projects[fitvids][patch][] = https://drupal.org/files/fitvids-conflicts-with-ckeditor-2078821-4.patch
 projects[flexslider] = 2.0-alpha3
 projects[media_soundcloud] = 1.0
 projects[media_youtube] = 2.0-rc4
