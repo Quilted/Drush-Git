@@ -23,7 +23,7 @@ api = 2
 ; alternative core projects like Pressflow. Note that makefiles included with
 ; install profiles *should not* include a core project.
 
-projects[] = drupal
+projects[drupal][patch][] = https://www.drupal.org/files/text-plain-1152216-24.patch
 
 
 ; Modules: Development

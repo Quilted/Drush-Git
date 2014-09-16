@@ -1,5 +1,12 @@
 ## Active Patches
 
+### Core
+- plain-text-newlines-1152216-24.patch
+  - Last checked Sept 15, 2014.
+  - See issue [#1152216: (Long) text field (textarea) with "Default" formatter does not retain newlines](https://drupal.org/node/1152216)
+  - **Problem:** Textarea field types using the plain text text formatter do not retain newlines. This caused long user content to run together despite returns being entered.
+  - **Patch:** Runs nl2br() on plain text.
+
 ### Features
 - features-alter-hooks-always-overridden-766264-23.patch
   - Last checked Sept 3, 2014.
