@@ -5,3 +5,41 @@
  */
 
 include_once 'quilted_admin.features.inc';
+
+/**
+ * Implements hook_permission().
+ */
+function quilted_admin_permission() {
+  $permissions = array(
+    'edit custom website settings' => array(
+      'title' => t('Edit general website settings'),
+      'description' => t('Allow users to edit custom variables'),
+    ),
+
+    'access top level admin pages' => array(
+      'title' => t('Access top level administrative pages'),
+      'description' => t('Allow users to access administrative landing pages and menu items'),
+    ),
+  );
+
+  return $permissions;
+}
+
+/**
+ * Implements hook_menu_alter().
+ */
+function quilted_admin_menu_alter(&$items) {
+  // Create an in-between permission
+  if (isset($items['admin/structure'])) {
+    $items['admin/structure']['access arguments'] = array('access top level admin pages');
+  }
+  if (isset($items['admin/config'])) {
+    $items['admin/config']['access arguments'] = array('access top level admin pages');
+  }
+  if (isset($items['admin/config/search'])) {
+    $items['admin/config/search']['access arguments'] = array('access top level admin pages');
+  }
+  if (isset($items['admin/config/content'])) {
+    $items['admin/config/content']['access arguments'] = array('access top level admin pages');
+  }
+}
