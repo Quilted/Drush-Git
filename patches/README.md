@@ -41,3 +41,10 @@
   - See issue [#1897462: Group variables inside fieldsets](https://drupal.org/node/1897462).
   - **Problem:** Variable groups don't display as fieldsets.
   - **Patch:** Allows variables organized as groups to be displayed as fieldsets.
+
+### Views
+- views-expose_filters_in_blocks.patch
+  - Last checked Sept 16, 2014.
+  - Didn't look in issues. Check later.
+  - **Problem:** By default, views doesn't allow exposed filters for block displays.
+  - **Patch:** Fixes this.

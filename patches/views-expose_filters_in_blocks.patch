@@ -1,0 +1,15 @@
+diff --git a/plugins/views_plugin_display_block.inc b/plugins/views_plugin_display_block.inc
+index c903a9b..14b8263 100644
+--- a/plugins/views_plugin_display_block.inc
++++ b/plugins/views_plugin_display_block.inc
+@@ -20,6 +20,10 @@ class views_plugin_display_block extends views_plugin_display {
+     return $options;
+   }
+ 
++  function uses_exposed_form_in_block() {
++    return TRUE;
++  }
++
+   /**
+    * The default block handler doesn't support configurable items,
+    * but extended block handlers might be able to do interesting
