@@ -97,6 +97,7 @@ projects[media][download][branch] = 7.x-2.x
 projects[media][patch][] = https://drupal.org/files/issues/media-wysiwyg-images-lose-ckeditor-styles-2148641-1.patch
 projects[picture][download][revision] = 18b94b9
 projects[picture][download][branch] = 7.x-1.x
+projects[picture][patch][] = https://www.drupal.org/files/issues/picture-addlistener-polyfill-in-matchmedia-is-broken-2333175-1.patch
 projects[wysiwyg][download][revision] = ee64524
 projects[wysiwyg][download][branch] = 7.x-2.x
 

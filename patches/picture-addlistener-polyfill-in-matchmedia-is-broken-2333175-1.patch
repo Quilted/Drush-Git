@@ -1,0 +1,22 @@
+diff --git a/picturefill/matchmedia.js b/picturefill/matchmedia.js
+index a26723a..1150bce 100644
+--- a/picturefill/matchmedia.js
++++ b/picturefill/matchmedia.js
+@@ -70,7 +70,7 @@ window.matchMedia = window.matchMedia || (function (doc, window, Drupal) {
+      *   the media property.
+      */
+     addListener: function (callback) {
+-      var handler = (function (mql, debounced) {
++      var handler = function (mql, debounced) {
+         return function () {
+           // Only execute the callback if the state has changed.
+           var oldstate = mql.matches;
+@@ -79,7 +79,7 @@ window.matchMedia = window.matchMedia || (function (doc, window, Drupal) {
+             debounced.call(mql, mql);
+           }
+         };
+-      }(this, Drupal.debounce(callback, 250)));
++      };
+       this.listeners.push({
+         'callback': callback,
+         'handler': handler

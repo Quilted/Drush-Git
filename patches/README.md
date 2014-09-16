@@ -28,6 +28,13 @@
   - **Problem:** Theme hook suggestion files, such as theme/field--field-grantee-year.theme.inc, are not loaded.
   - **Patch:** Fixes this.
 
+### Picture
+- picture-addlistener-polyfill-in-matchmedia-is-broken-2333175-1.patch
+  - Last checked Sept 16, 2014.
+  - See issue [2333175#: The addListener() polyfill in matchmedia.js is broken](https://www.drupal.org/node/2333175).
+  - **Problem:** The addListener() polyfill in matchmedia.js accidentally backported a Drupal 8 function, Drupal.debounce.
+  - **Patch:** Removes the debounce function call.
+
 ### Variable
 - group-variables-in-fieldsets-1897462-1.patch!
   - Last checked Sept 15, 2014.
