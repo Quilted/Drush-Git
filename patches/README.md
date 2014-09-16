@@ -14,16 +14,23 @@
   - **Problem:** Most recent versions of file_entity and media_youtube implement hook_file_default_displays_alter(). The defaults appear as always overridden.
   - **Patch:** Only shows feature components as overridden if they are explicitly declared and ignores alters.
 
-### Variable
-- group-variables-in-fieldsets-1897462-1.patch!
-  - Last checked Sept 15, 2014.
-  - See issue [#1897462: Group variables inside fieldsets](https://drupal.org/node/1897462).
-  - **Problem:** Variable groups don't display as fieldsets.
-  - **Patch:** Allows variables organized as groups to be displayed as fieldsets.
-
 ### Media
 - media-wysiwyg-images-lose-ckeditor-styles-2148641-1.patch
   - Last checked Sept 15, 2014.
   - See issue [#2148641: WYSIWYG-inserted images lose ckeditor styles](https://drupal.org/node/2148641).
   - **Problem:** Attributes added to WYSIWYG-inserted images using the ckeditor image editor, such as alignment, don't get saved.
   - **Patch:** Fixes this.
+
+### Omega
+- omega-include_theme_hook_suggestion_files-2292961-2.patch
+  - Last checked Aug 30, 2014.
+  - See issue [#2292961: Function include files for theme hook suggestions not loaded](https://www.drupal.org/node/2292961).
+  - **Problem:** Theme hook suggestion files, such as theme/field--field-grantee-year.theme.inc, are not loaded.
+  - **Patch:** Fixes this.
+
+### Variable
+- group-variables-in-fieldsets-1897462-1.patch!
+  - Last checked Sept 15, 2014.
+  - See issue [#1897462: Group variables inside fieldsets](https://drupal.org/node/1897462).
+  - **Problem:** Variable groups don't display as fieldsets.
+  - **Patch:** Allows variables organized as groups to be displayed as fieldsets.

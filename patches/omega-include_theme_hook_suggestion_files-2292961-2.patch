@@ -1,0 +1,13 @@
+diff --git a/omega/includes/registry.inc b/omega/includes/registry.inc
+index 0cc5fba..eef5525 100644
+--- a/omega/includes/registry.inc
++++ b/omega/includes/registry.inc
+@@ -136,7 +136,7 @@ class OmegaThemeRegistryHandler {
+ 
+       // By adding this file to the 'includes' array we make sure that it is
+       // available when the hook is executed.
+-      $this->registry[$item->hook]['includes'][] = $item->uri;
++      $this->registry[$base]['includes'][] = $item->uri;
+     }
+   }
+ 

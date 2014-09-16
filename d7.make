@@ -103,7 +103,7 @@ projects[wysiwyg][download][branch] = 7.x-2.x
 
 ; Themes
 ; --------
-projects[] = omega
+projects[omega][patch][] = https://www.drupal.org/files/issues/omega-include_theme_hook_suggestion_files-2292961-2.patch
 
 
 ; Libraries
