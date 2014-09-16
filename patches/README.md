@@ -55,3 +55,11 @@
   - Didn't look in issues. Check later.
   - **Problem:** By default, views doesn't allow exposed filters for block displays.
   - **Patch:** Fixes this.
+
+### Views Bulk Operations
+- views-bulk-operations-2192775-1_0.patch
+  - Last checkd Sept 16, 2014.
+  - This is fixed in commit [2821a8a7](http://drupalcode.org/project/views_bulk_operations.git/commit/2821a8a7419f50d6e4c7a9dd714fbcac3318ed9b), which should be released as part of 7.x-3.3
+  - See issue [#2192775: views_bulk_operations_load_action_includes() uses relative path in include_once](https://drupal.org/node/2192775).
+  - **Problem:** The latest version of VBO was throwing errors because the include_once() was using relative paths. This was showing up unexpectedly.
+  - **Patch:** Fixes this by switching to using module_load_inc().

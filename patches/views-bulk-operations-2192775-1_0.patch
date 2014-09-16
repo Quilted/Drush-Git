@@ -1,0 +1,33 @@
+diff --git a/views_bulk_operations.module b/views_bulk_operations.module
+index b25b661..2f1c8a4 100644
+--- a/views_bulk_operations.module
++++ b/views_bulk_operations.module
+@@ -43,19 +43,19 @@ function views_bulk_operations_load_action_includes() {
+   // caching the result has its cost).
+   $path = drupal_get_path('module', 'views_bulk_operations') . '/actions/';
+   $files = array(
+-    'archive.action.inc',
+-    'argument_selector.action.inc',
+-    'book.action.inc',
+-    'delete.action.inc',
+-    'modify.action.inc',
+-    'script.action.inc',
+-    'user_roles.action.inc',
+-    'user_cancel.action.inc',
++    'archive.action',
++    'argument_selector.action',
++    'book.action',
++    'delete.action',
++    'modify.action',
++    'script.action',
++    'user_roles.action',
++    'user_cancel.action',
+   );
+ 
+   if (!$loaded) {
+     foreach ($files as $file) {
+-      include_once $path . $file;
++      module_load_include('inc', 'views_bulk_operations', 'actions/' . $file);
+     }
+     $loaded = TRUE;
+   }

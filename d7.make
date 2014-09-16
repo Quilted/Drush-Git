@@ -75,7 +75,7 @@ projects[] = token
 projects[] = transliteration
 projects[variable][patch][] = https://drupal.org/files/group-variables-in-fieldsets-1897462-1.patch
 projects[views][patch][] = https://raw.githubusercontent.com/Quilted/Drush-Git/master/patches/views-expose_filters_in_blocks.patch
-projects[] = views_bulk_operations
+projects[views_bulk_operations][patch][] = https://www.drupal.org/files/issues/views-bulk-operations-2192775-1_0.patch
 projects[] = xmlsitemap
 
 
