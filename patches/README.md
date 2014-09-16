@@ -1,5 +1,12 @@
 ## Active Patches
 
+### Better Exposed Filters
+- better_exposed_filters-links-ajax-1268150-102.patch
+  - Last checked Sept 16, 2014.
+  - See issue [#1268150: Ajax doesnt work with BEF Links](https://drupal.org/node/1268150)
+  - **Problem:** Better exposed filters does not handle displaying exposed filters as links (one of BEF's options) when "use AJAX" is on. We need "use AJAX" to show exposed filters on blocks.
+  - **Patch:** Adds js handling for radio buttons as links in exposed filters and code for showing exposed sort by without requiring an exposed sort order as well.
+
 ### Core
 - plain-text-newlines-1152216-24.patch
   - Last checked Sept 15, 2014.
