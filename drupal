@@ -74,6 +74,8 @@ def create_file_structure
   FileUtils.touch "#{ PROJECT_NAME }/tmp_files/PLACEHOLDER.md"
   FileUtils.mkdir_p "#{ PROJECT_NAME }/tests"
   FileUtils.touch "#{ PROJECT_NAME }/tests/PLACEHOLDER.md"
+  FileUtils.mkdir_p "#{ PROJECT_NAME }/documentation"
+  FileUtils.touch "#{ PROJECT_NAME }/documentation/PLACEHOLDER.md"
 end
 
 def create_drushrc
