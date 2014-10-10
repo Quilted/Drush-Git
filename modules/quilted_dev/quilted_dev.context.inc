@@ -17,17 +17,15 @@ function quilted_dev_context_default_contexts() {
   $context->description = 'Debug (excludes admin pages and homepage)';
   $context->tag = '';
   $context->conditions = array(
+    'is_admin_page' => array(
+      'values' => array(
+        'not admin' => 'not admin',
+      ),
+    ),
     'path' => array(
       'values' => array(
         '*' => '*',
         '~<front>' => '~<front>',
-        '~batch' => '~batch',
-        '~admin' => '~admin',
-        '~admin/*' => '~admin/*',
-        '~node/*/delete' => '~node/*/delete',
-        '~node/*/devel' => '~node/*/devel',
-        '~media/browser' => '~media/browser',
-        '~media/*/format-form' => '~media/*/format-form',
       ),
     ),
   );
@@ -43,7 +41,7 @@ function quilted_dev_context_default_contexts() {
       ),
     ),
   );
-  $context->condition_mode = 0;
+  $context->condition_mode = 1;
 
   // Translatables
   // Included for use with string extractors like potx.

@@ -43,3 +43,61 @@ function quilted_admin_menu_alter(&$items) {
     $items['admin/config/content']['access arguments'] = array('access top level admin pages');
   }
 }
+
+/**
+ * Implements hook_admin_paths().
+ */
+function quilted_admin_admin_paths() {
+  $paths = array(
+    'media/*/format-form' => TRUE,
+  );
+  return $paths;
+}
+
+/**
+ * Impelements hook_context_plugins().
+ */
+function quilted_admin_context_plugins() {
+  $plugins = array(
+    'is_admin_page' => array(
+      'handler' => array(
+        'path' => drupal_get_path('module', 'quilted_admin') . '/plugins/context',
+        'file' => 'is_admin_page.inc',
+        'class' => 'is_admin_page',
+        'parent' => 'context_condition',
+      ),
+    ),
+  );
+  return $plugins;
+}
+
+/**
+ * Implements hook_context_registry().
+ */
+function quilted_admin_context_registry() {
+  $registry = array(
+    'conditions' => array(
+      'is_admin_page' => array(
+        'title' => t('Admin Page'),
+        'description' => t('Set this context based on whether or not the current page an admin page.'),
+        'plugin' => 'is_admin_page',
+      ),
+    ),
+  );
+  return $registry;
+}
+
+/**
+ * Implements hook_context_page_reaction().
+ *
+ * Gotta run on context_page_reaction, so Views and OG have a chance to
+ * set/modify Group context.
+ *
+ * @see https://ohthehugemanatee.org/blog/2013/12/02/custom-context-conditions
+ */
+function quilted_admin_context_page_reaction() {
+  $plugin = context_get_plugin('condition', 'is_admin_page');
+  if ($plugin) {
+    $plugin->execute();
+  }
+}

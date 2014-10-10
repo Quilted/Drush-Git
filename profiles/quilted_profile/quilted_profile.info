@@ -81,5 +81,6 @@ dependencies[] = xmlsitemap_custom
 dependencies[] = xmlsitemap_node
 
 dependencies[] = quilted_dev
+dependencies[] = quilted_admin
 
 files[] = quilted_profile.profile

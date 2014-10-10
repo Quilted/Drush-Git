@@ -36,16 +36,15 @@ function quilted_profile_setup_contexts() {
   $context->description = 'Internal pages (excludes admin pages and homepage)';
   $context->tag = '';
   $context->conditions = array(
+    'is_admin_page' => array(
+      'values' => array(
+        'not admin' => 'not admin',
+      ),
+    ),
     'path' => array(
       'values' => array(
         '*' => '*',
         '~<front>' => '~<front>',
-        '~batch' => '~batch',
-        '~admin' => '~admin',
-        '~admin/*' => '~admin/*',
-        '~node/*/devel' => '~node/*/devel',
-        '~media/browser' => '~media/browser',
-        '~media/*/format-form' => '~media/*/format-form',
       ),
     ),
   );
@@ -61,7 +60,7 @@ function quilted_profile_setup_contexts() {
       ),
     ),
   );
-  $context->condition_mode = 0;
+  $context->condition_mode = 1;
   context_save($context);
 
   // Sitewide context.
@@ -78,15 +77,9 @@ function quilted_profile_setup_contexts() {
         404 => 404,
       ),
     ),
-    'path' => array(
+    'is_admin_page' => array(
       'values' => array(
-        '*' => '*',
-        '~batch' => '~batch',
-        '~admin' => '~admin',
-        '~admin/*' => '~admin/*',
-        '~node/*/devel' => '~node/*/devel',
-        '~media/browser' => '~media/browser',
-        '~media/*/format-form' => '~media/*/format-form',
+        'not admin' => 'not admin',
       ),
     ),
   );
