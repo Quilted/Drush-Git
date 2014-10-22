@@ -28,13 +28,6 @@
   - **Problem:** Attributes added to WYSIWYG-inserted images using the ckeditor image editor, such as alignment, don't get saved.
   - **Patch:** Fixes this.
 
-### Omega
-- omega-include_theme_hook_suggestion_files-2292961-2.patch
-  - Last checked Aug 30, 2014.
-  - See issue [#2292961: Function include files for theme hook suggestions not loaded](https://www.drupal.org/node/2292961).
-  - **Problem:** Theme hook suggestion files, such as theme/field--field-grantee-year.theme.inc, are not loaded.
-  - **Patch:** Fixes this.
-
 ### Picture
 - picture-addlistener-polyfill-in-matchmedia-is-broken-2333175-1.patch
   - Last checked Sept 16, 2014.
