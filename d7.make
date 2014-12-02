@@ -68,6 +68,7 @@ projects[] = modernizr
 projects[] = navigation404
 projects[] = pathauto
 projects[] = redirect
+projects[] = smart_trim
 projects[] = strongarm
 projects[] = textformatter
 projects[] = title
