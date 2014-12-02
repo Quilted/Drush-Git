@@ -102,6 +102,11 @@ projects[wysiwyg][download][revision] = ee64524
 projects[wysiwyg][download][branch] = 7.x-2.x
 
 
+; Themes
+; ---------
+projects[] = omega
+
+
 ; Libraries
 ; ---------
 projects[] = libraries
