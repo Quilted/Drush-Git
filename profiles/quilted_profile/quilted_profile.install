@@ -208,7 +208,41 @@ h2,h3,h4,h5,h6',
   foreach ($types as $type) {
     $type = node_type_set_defaults($type);
     node_type_save($type);
-    node_add_body_field($type);
+
+    // Add body field.
+    // @see node_add_body_field().
+    $field_name = 'field_' . $type->type . '_body';
+    $label = st('Body');
+    $field = field_info_field($field_name);
+    $instance = field_info_instance('node', $field_name, $type->type);
+    if (empty($field)) {
+      $field = array(
+        'field_name' => $field_name,
+        'type' => 'text_long',
+        'entity_types' => array('node'),
+      );
+      $field = field_create_field($field);
+    }
+    if (empty($instance)) {
+      $instance = array(
+        'field_name' => $field_name,
+        'entity_type' => 'node',
+        'bundle' => $type->type,
+        'label' => $label,
+        'widget' => array('type' => 'text_textarea'),
+        'display' => array(
+          'default' => array(
+            'label' => 'hidden',
+            'type' => 'text_default',
+          ),
+          'teaser' => array(
+            'label' => 'hidden',
+            'type' => 'text_default',
+          ),
+        ),
+      );
+      $instance = field_create_instance($instance);
+    }
   }
 
   // Insert default pre-defined RDF mapping into the database.
