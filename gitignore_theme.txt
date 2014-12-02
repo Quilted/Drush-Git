@@ -7,9 +7,6 @@ node_modules
 # Exclude image sprites
 images/image-replacement-*.png
 
-# Ignore the Gemfile.lock.
-Gemfile.lock
-
 # Ignore css.
 css
 css/*

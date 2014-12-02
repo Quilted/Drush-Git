@@ -15,7 +15,6 @@ tmp_files/*
 private_files/*
 !private_files/PLACEHOLDER.md
 
-
 # Ignore logs
 log/
 
