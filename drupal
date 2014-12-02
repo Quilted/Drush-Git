@@ -175,7 +175,7 @@ def create_general_feature(project_machine_name)
     'variable:user_register',
 
     # Fields
-    'field_instance:node-page-body',
+    'field_instance:node-page-field_page_body',
 
     # Filters
     'filter:ds_code',
