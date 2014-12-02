@@ -64,6 +64,7 @@ projects[] = field_group
 projects[] = globalredirect
 projects[] = jquery_update
 projects[] = link
+projects[] = mailsystem
 projects[] = modernizr
 projects[] = navigation404
 projects[] = pathauto

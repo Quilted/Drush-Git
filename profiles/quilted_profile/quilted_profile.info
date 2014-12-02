@@ -54,6 +54,7 @@ dependencies[] = image_dimensions
 dependencies[] = jquery_update
 dependencies[] = libraries
 dependencies[] = link
+dependencies[] = mailsystem
 dependencies[] = media
 dependencies[] = media_internet
 dependencies[] = media_soundcloud
