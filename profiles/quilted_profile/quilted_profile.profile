@@ -22,6 +22,9 @@ function quilted_profile_final_site_setup() {
 
   // Pathauto default path.
   variable_set('pathauto_node_pattern', '[node:title]');
+
+  // Disable automatic update emails by default.
+  variable_del('update_notify_emails');
 }
 
 /**
