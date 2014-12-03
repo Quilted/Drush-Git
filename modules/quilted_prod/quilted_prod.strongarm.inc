@@ -14,7 +14,7 @@ function quilted_prod_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'block_cache';
-  $strongarm->value = 1;
+  $strongarm->value = 0;
   $export['block_cache'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -28,7 +28,7 @@ function quilted_prod_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'cache_lifetime';
-  $strongarm->value = '1';
+  $strongarm->value = '0';
   $export['cache_lifetime'] = $strongarm;
 
   $strongarm = new stdClass();
