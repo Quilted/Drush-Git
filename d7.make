@@ -55,7 +55,6 @@ projects[] = custom_search
 projects[] = date
 projects[] = delta
 projects[] = draggableviews
-projects[] = ds
 projects[] = email
 projects[] = entity
 projects[] = entityreference

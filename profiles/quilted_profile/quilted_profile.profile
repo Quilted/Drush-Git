@@ -1,6 +1,6 @@
 <?php
 /**
- * Implementation of hook_profile_tasks().
+ * Implements hook_profile_tasks().
  */
 function quilted_profile_install_tasks(&$install_state) {
   $tasks = array(
@@ -8,6 +8,26 @@ function quilted_profile_install_tasks(&$install_state) {
     'quilted_profile_setup_contexts' => array(),
   );
   return $tasks;
+}
+
+/**
+ * Implements hook_entity_info_alter().
+ */
+function quilted_profile_entity_info_alter(&$entity_info) {
+  $entity_info['file']['view modes']['responsive_small'] = array(
+    'label' => t('Responsive Small'),
+    'custom settings' => TRUE,
+  );
+
+  $entity_info['file']['view modes']['responsive_medium'] = array(
+    'label' => t('Responsive Medium'),
+    'custom settings' => TRUE,
+  );
+
+  $entity_info['file']['view modes']['responsive_large'] = array(
+    'label' => t('Responsive Large'),
+    'custom settings' => TRUE,
+  );
 }
 
 /**

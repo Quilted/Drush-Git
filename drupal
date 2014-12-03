@@ -177,9 +177,6 @@ def create_general_feature(project_machine_name)
     # Fields
     'field_instance:node-page-field_page_body',
 
-    # Filters
-    'filter:ds_code',
-
     # Node
     'node:page',
 
@@ -207,14 +204,9 @@ def create_general_feature(project_machine_name)
     'user_permission:administer contexts',
     'user_permission:access contextual links',
     'user_permission:administer delta blocks',
-    'user_permission:admin_view_modes',
-    'user_permission:admin_fields',
-    'user_permission:admin_classes',
-    'user_permission:admin_display_suite',
     'user_permission:administer features',
     'user_permission:manage features',
     'user_permission:administer filters',
-    'user_permission:use text format ds_code',
     'user_permission:administer menu',
     'user_permission:bypass node access',
     'user_permission:administer content types',

@@ -37,7 +37,6 @@ Note: Version numbers and commit hashes indicate the most recent version tested 
 
 - [Breakpoints (7.x-1.1)](https://drupal.org/project/breakpoints)
 - [ctools](https://drupal.org/project/ctools)
-- [Display Suite](https://drupal.org/project/ds)
 - [Features](https://drupal.org/project/features)
 - [File Entity (7.x-2.0-alpha3)](https://drupal.org/project/features)
 - [Fitvids (7.x-1.14)](https://drupal.org/project/fitvids)
