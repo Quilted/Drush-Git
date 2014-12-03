@@ -37,15 +37,6 @@ function quilted_dev_user_default_permissions() {
     'module' => 'masquerade',
   );
 
-  // Exported permission: 'administer shield'.
-  $permissions['administer shield'] = array(
-    'name' => 'administer shield',
-    'roles' => array(
-      'administrator' => 'administrator',
-    ),
-    'module' => 'shield',
-  );
-
   // Exported permission: 'delete maillog'.
   $permissions['delete maillog'] = array(
     'name' => 'delete maillog',

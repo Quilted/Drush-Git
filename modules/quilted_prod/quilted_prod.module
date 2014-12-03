@@ -12,7 +12,6 @@ include_once('quilted_prod.features.inc');
 function quilted_prod_enable() {
   $modules = array(
     'devel',
-    'shield',
     'maillog',
     'masquerade',
     'styleguide'

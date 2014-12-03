@@ -32,7 +32,6 @@ projects[] = devel
 projects[] = diff
 projects[] = maillog
 projects[] = masquerade
-projects[] = shield
 projects[] = styleguide
 
 
