@@ -442,7 +442,6 @@ function quilted_admin_views_default_views() {
   $handler->display->display_options['style_options']['columns'] = array(
     'views_bulk_operations' => 'views_bulk_operations',
     'name' => 'name',
-    'mail' => 'mail',
     'status' => 'status',
     'rid' => 'rid',
     'created' => 'created',
@@ -458,13 +457,6 @@ function quilted_admin_views_default_views() {
       'empty_column' => 0,
     ),
     'name' => array(
-      'sortable' => 1,
-      'default_sort_order' => 'asc',
-      'align' => '',
-      'separator' => '',
-      'empty_column' => 0,
-    ),
-    'mail' => array(
       'sortable' => 1,
       'default_sort_order' => 'asc',
       'align' => '',
