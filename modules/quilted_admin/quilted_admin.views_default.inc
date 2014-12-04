@@ -447,6 +447,7 @@ function quilted_admin_views_default_views() {
     'created' => 'created',
     'access' => 'access',
     'edit_node' => 'edit_node',
+    'devel_user' => 'devel_user',
     'nothing' => 'nothing',
   );
   $handler->display->display_options['style_options']['default'] = 'created';
@@ -490,6 +491,11 @@ function quilted_admin_views_default_views() {
       'empty_column' => 0,
     ),
     'edit_node' => array(
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'devel_user' => array(
       'align' => '',
       'separator' => '',
       'empty_column' => 0,
@@ -633,12 +639,18 @@ function quilted_admin_views_default_views() {
   $handler->display->display_options['fields']['edit_node']['field'] = 'edit_node';
   $handler->display->display_options['fields']['edit_node']['exclude'] = TRUE;
   $handler->display->display_options['fields']['edit_node']['text'] = 'edit';
+  /* Field: User: Edit link */
+  $handler->display->display_options['fields']['devel_user']['id'] = 'devel_user';
+  $handler->display->display_options['fields']['devel_user']['table'] = 'users';
+  $handler->display->display_options['fields']['devel_user']['field'] = 'devel_user';
+  $handler->display->display_options['fields']['devel_user']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['devel_user']['text'] = 'devel';
   /* Field: Global: Custom text */
   $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['table'] = 'views';
   $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['label'] = 'Actions';
-  $handler->display->display_options['fields']['nothing']['alter']['text'] = '[edit_node]';
+  $handler->display->display_options['fields']['nothing']['alter']['text'] = '[edit_node] [devel_user]';
   /* Sort criterion: User: Created date */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'users';
