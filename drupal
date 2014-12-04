@@ -260,6 +260,8 @@ def create_general_feature(project_machine_name)
     'user_permission:administer fieldgroups',
     'user_permission:context ajax block access',
     'user_permission:generate features',
+    'user_permission:rename features',
+    'user_permission:administer mailsystem',
     'user_permission:use custom search']
 
   feature_name = "#{ project_machine_name }_general"
