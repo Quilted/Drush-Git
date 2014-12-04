@@ -12,4 +12,5 @@ features[user_permission][] = access top level admin pages
 features[user_permission][] = edit custom website settings
 features[views_view][] = content
 features[views_view][] = people
+files[] = views/handlers/views_handler_field_node_link_devel.inc
 project path = sites/all/modules/custom

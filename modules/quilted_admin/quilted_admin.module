@@ -139,3 +139,18 @@ function quilted_admin_form_alter(&$form, &$form_state, $form_id) {
 function quilted_admin_form_user_login_alter(&$form, &$form_state, $form_id) {
   $form['pass']['#description'] .= ' ' . l(t('Forgot your password?'), 'user/password');
 }
+
+/**
+ * Implements hook_views_data().
+ *
+ * Adds custom field handlers for views.
+ */
+function quilted_admin_views_data_alter(&$data) {
+  $data['views_entity_node']['devel_node'] = array(
+    'field' => array(
+      'title' => t('Devel link'),
+      'help' => t('Provide a simple link to devel the content.'),
+      'handler' => 'views_handler_field_node_link_devel',
+    ),
+  );
+}

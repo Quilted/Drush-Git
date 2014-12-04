@@ -89,6 +89,7 @@ function quilted_admin_views_default_views() {
     'changed' => 'changed',
     'edit_node' => 'edit_node',
     'delete_node' => 'delete_node',
+    'devel_node' => 'devel_node',
     'nothing' => 'nothing',
   );
   $handler->display->display_options['style_options']['default'] = 'changed';
@@ -146,6 +147,11 @@ function quilted_admin_views_default_views() {
       'empty_column' => 0,
     ),
     'delete_node' => array(
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'devel_node' => array(
       'align' => '',
       'separator' => '',
       'empty_column' => 0,
@@ -346,13 +352,19 @@ function quilted_admin_views_default_views() {
   $handler->display->display_options['fields']['delete_node']['table'] = 'views_entity_node';
   $handler->display->display_options['fields']['delete_node']['field'] = 'delete_node';
   $handler->display->display_options['fields']['delete_node']['exclude'] = TRUE;
+  /* Field: Content: Devel link */
+  $handler->display->display_options['fields']['devel_node']['id'] = 'devel_node';
+  $handler->display->display_options['fields']['devel_node']['table'] = 'views_entity_node';
+  $handler->display->display_options['fields']['devel_node']['field'] = 'devel_node';
+  $handler->display->display_options['fields']['devel_node']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['devel_node']['text'] = 'devel';
   /* Field: Actions */
   $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['table'] = 'views';
   $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['ui_name'] = 'Actions';
   $handler->display->display_options['fields']['nothing']['label'] = 'Actions';
-  $handler->display->display_options['fields']['nothing']['alter']['text'] = '[edit_node] [delete_node]';
+  $handler->display->display_options['fields']['nothing']['alter']['text'] = '[edit_node] [delete_node] [devel_node]';
   /* Sort criterion: Content: Post date */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
