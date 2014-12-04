@@ -45,6 +45,10 @@ function quilted_profile_final_site_setup() {
 
   // Disable automatic update emails by default.
   variable_del('update_notify_emails');
+
+  // Set jquery_update version to 1.8.
+  // Fixes fitvids compatibility problems.
+  variable_set('jquery_update_jquery_version', '1.8');
 }
 
 /**
