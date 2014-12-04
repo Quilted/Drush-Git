@@ -11,4 +11,5 @@ features[features_api][] = api:2
 features[user_permission][] = access top level admin pages
 features[user_permission][] = edit custom website settings
 features[views_view][] = content
+features[views_view][] = people
 project path = sites/all/modules/custom
