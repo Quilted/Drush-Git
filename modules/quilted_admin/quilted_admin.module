@@ -101,3 +101,41 @@ function quilted_admin_context_page_reaction() {
     $plugin->execute();
   }
 }
+
+/**
+ * Implements hook_form_alter().
+ */
+function quilted_admin_form_alter(&$form, &$form_state, $form_id) {
+  // For all content types:
+  // - disable content revision
+  // - disable sticky at top of lists
+  foreach (node_type_get_types() as $key => $value) {
+    if ($form_id == $key . '_node_form') {
+      unset($form['revision_information']);
+      unset($form['options']['sticky']);
+    }
+  }
+
+  // Disable promoted to front page option for all content types with nsome
+  // exclusions.
+  $promoted_excluded_types = array(
+    // Add the machine name for any content types that should display 'Promote to front page' option.
+  );
+
+  foreach ($promoted_excluded_types as $key => $type) {
+    $promoted_excluded_types[$key] = $type . '_node_form';
+  }
+
+  foreach (node_type_get_types() as $key => $value) {
+    if (!in_array($form_id, $promoted_excluded_types)) {
+      unset($form['options']['promote']);
+    }
+  }
+}
+
+/**
+ * Implements hook_form_USER_LOGIN_alter().
+ */
+function quilted_admin_form_user_login_alter(&$form, &$form_state, $form_id) {
+  $form['pass']['#description'] .= ' ' . l(t('Forgot your password?'), 'user/password');
+}
