@@ -639,7 +639,7 @@ function quilted_admin_views_default_views() {
   $handler->display->display_options['fields']['edit_node']['field'] = 'edit_node';
   $handler->display->display_options['fields']['edit_node']['exclude'] = TRUE;
   $handler->display->display_options['fields']['edit_node']['text'] = 'edit';
-  /* Field: User: Edit link */
+  /* Field: User: Devel link */
   $handler->display->display_options['fields']['devel_user']['id'] = 'devel_user';
   $handler->display->display_options['fields']['devel_user']['table'] = 'users';
   $handler->display->display_options['fields']['devel_user']['field'] = 'devel_user';
