@@ -1,6 +1,6 @@
 <?php
 /**
- * Field handler to present a simple link to run devel on the node.
+ * Field handler to present a simple link to run devel on the user.
  *
  * @ingroup views_field_handlers
  */

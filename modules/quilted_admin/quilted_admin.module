@@ -189,4 +189,12 @@ function quilted_admin_views_data_alter(&$data) {
       'handler' => 'views_handler_field_user_link_devel',
     ),
   );
+
+  $data['users']['masquerade_user'] = array(
+    'field' => array(
+      'title' => t('Masquerade link'),
+      'help' => t('Provide a simple link to masquerade as the user.'),
+      'handler' => 'views_handler_field_user_link_masquerade',
+    ),
+  );
 }

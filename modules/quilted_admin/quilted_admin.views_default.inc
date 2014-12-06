@@ -646,12 +646,17 @@ function quilted_admin_views_default_views() {
   $handler->display->display_options['fields']['devel_user']['field'] = 'devel_user';
   $handler->display->display_options['fields']['devel_user']['exclude'] = TRUE;
   $handler->display->display_options['fields']['devel_user']['text'] = 'devel';
+  /* Field: User: Masquerade link */
+  $handler->display->display_options['fields']['masquerade_user']['id'] = 'masquerade_user';
+  $handler->display->display_options['fields']['masquerade_user']['table'] = 'users';
+  $handler->display->display_options['fields']['masquerade_user']['field'] = 'masquerade_user';
+  $handler->display->display_options['fields']['masquerade_user']['exclude'] = TRUE;
   /* Field: Global: Custom text */
   $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['table'] = 'views';
   $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['label'] = 'Actions';
-  $handler->display->display_options['fields']['nothing']['alter']['text'] = '[edit_node] [devel_user]';
+  $handler->display->display_options['fields']['nothing']['alter']['text'] = '[edit_node] [masquerade_user] [devel_user]';
   /* Sort criterion: User: Created date */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'users';
