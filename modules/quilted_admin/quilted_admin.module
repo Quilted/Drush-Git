@@ -141,6 +141,34 @@ function quilted_admin_form_user_login_alter(&$form, &$form_state, $form_id) {
 }
 
 /**
+ * Implements hook_form_USER_FILTER_FORM_alter().
+ *
+ * Hides the default /admin/people form so that it can be replaced with a custom
+ * views block display provided by this module.
+ */
+function quilted_admin_form_user_filter_form_alter(&$form, &$form_state, $form_id) {
+  foreach ($form as $key => $value) {
+    if ($key[0] != '#' && !in_array($key, array('form_build_id', 'form_token', 'form_id'))) {
+      unset($form[$key]);
+    }
+  }
+}
+
+/**
+ * Implements hook_form_USER_ADMIN_ACCOUNT_alter().
+ *
+ * Hides the default /admin/people form so that it can be replaced with a custom
+ * views block display provided by this module.
+ */
+function quilted_admin_form_user_admin_account_alter(&$form, &$form_state, $form_id) {
+  foreach ($form as $key => $value) {
+    if ($key[0] != '#' && !in_array($key, array('form_build_id', 'form_token', 'form_id'))) {
+      unset($form[$key]);
+    }
+  }
+}
+
+/**
  * Implements hook_views_data().
  *
  * Adds custom field handlers for views.
