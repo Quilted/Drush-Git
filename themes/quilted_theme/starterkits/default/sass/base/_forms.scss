@@ -1,0 +1,65 @@
+label,
+select {
+  display: block;
+}
+
+label {
+  cursor: pointer;
+}
+
+input[type="search"] {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  -webkit-appearance: textfield;
+  box-sizing: content-box;
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+}
+
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"] {}
+
+textarea {}
+
+input[type="image"],
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+input[type="radio"],
+input[type="checkbox"] {
+  width: auto;
+}
+
+select,
+input[type="file"] {
+  // In IE7, the height of the select element cannot be changed by height, only font-size.
+  *margin-top: 4px;
+  width: 100%;
+}
+
+input[type="file"] {
+  @include breakpoint($narrow) {
+    width: auto;
+  }
+}
+
+input[type="submit"] {
+  @include button;
+}
+
+fieldset {}
