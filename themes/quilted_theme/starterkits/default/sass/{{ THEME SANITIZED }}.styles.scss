@@ -1,8 +1,8 @@
 // Import external libraries.
 @import "compass";
 @import "breakpoint";
-@import "singularitygs";
 @import "toolkit";
+@import "susy";
 
 // Import variables, abstractions, base styles and components using globbing.
 //
@@ -18,5 +18,7 @@
 // dependencies shouldn't be a problem.
 @import "variables/**/*";
 @import "abstractions/**/*";
+@import "vendor/**/*";
 @import "base/**/*";
+@import "page_frame/**/*";
 @import "components/**/*";
