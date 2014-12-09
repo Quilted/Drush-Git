@@ -1,0 +1,23 @@
+html, body {
+  height: 100%;
+}
+
+.l-page {
+  min-height: 100%;
+  position: relative;
+  padding-bottom: 508px;
+}
+
+.l-region--sidebar-first {
+  min-height: 100%;
+}
+
+.l-main {
+  min-height: 100%;
+}
+
+.l-footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
