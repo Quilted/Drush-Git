@@ -44,3 +44,6 @@ relative_assets = true
 
 # Output source maps in development mode.
 sass_options = (environment == :production) ? {} : {:sourcemap => true}
+
+# Encoding
+Encoding.default_external = "UTF-8"
