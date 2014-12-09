@@ -1,0 +1,162 @@
+@mixin retina-image($image, $width, $height) {
+  @media (-webkit-min-device-pixel-ratio: 1.5),
+         (min--moz-device-pixel-ratio: 1.5),
+         (-o-min-device-pixel-ratio: 3/2),
+         (min-device-pixel-ratio: 1.5),
+         (min-resolution: 144dpi) {
+    background-image: url($image);
+    background-size: $width $height;
+  }
+}
+
+@mixin retina-image-with-hover($image, $width, $height, $position: left center, $hover: false, $active: false) {
+  @include retina-image("../images/" + $background-images-2x + $image + ".png", $width, $height);
+
+  background-image: url("../images/" + $background-images + $image + ".png");
+  background-position: $position;
+  background-repeat: no-repeat;
+
+  @if $hover == true {
+    &:hover,
+    &:focus {
+      @include retina-image("../images/" + $background-images-2x + $image + "_hover.png", $width, $height);
+
+      background-image: url("../images/" + $background-images + $image + "_hover.png");
+    }
+  }
+
+  @if $active == true {
+    &:active {
+      @include retina-image("../images/" + $background-images-2x + $image + "_active.png", $width, $height);
+
+      background-image: url("../images/" + $background-images + $image + "_active.png");
+    }
+  }
+}
+
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+.clearfix {
+  @include clearfix;
+}
+
+@mixin no-clearfix {
+  &:after {
+    content: none;
+    display: inline;
+    clear: none;
+  }
+}
+
+@mixin rgba($color, $value) {
+  background-color: $color;
+  background-color: rgba($color, $value);
+}
+
+@mixin visually-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+@mixin undo-visually-hidden {
+  border: inherit;
+  clip: inherit;
+  height: inherit;
+  margin: inherit;
+  overflow: inherit;
+  padding: inherit;
+  position: inherit;
+  width: inherit;
+}
+
+.visually-hidden,
+.element-invisible {
+  @include visually-hidden;
+}
+
+@mixin item-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  li {
+    padding: 0;
+  }
+}
+
+@mixin image-replace {
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  word-wrap: normal;
+}
+
+@mixin image-replace-link {
+  @include image-replace;
+  display: block;
+  border-bottom: none;
+}
+
+@mixin image-replace-undo {
+  text-indent: 0;
+  white-space: normal;
+  overflow: auto;
+  word-wrap: normal;
+}
+
+
+@mixin image-replace-link-undo {
+  @include image-replace-undo;
+//  display: inline;
+  height: auto;
+  width: auto;
+}
+
+@mixin item-list-menu {
+  padding: 0;
+  margin: 0;
+
+  li {
+    @include item-list;
+    @include clearfix;
+  }
+}
+
+@mixin placeholder($color: $white) {
+  &::-webkit-input-placeholder {
+    color: $color;
+  }
+
+  &:-moz-placeholder {
+    color: $color;
+  }
+
+  &::-moz-placeholder {
+    color: $color;
+  }
+
+  &:-ms-input-placeholder {
+    color: $color;
+  }
+}
+
+@mixin fix-image-line-height {
+  display: block;
+  line-height: 1px;
+}
+
+.strike-through {
+  text-decoration: line-through;
+}
