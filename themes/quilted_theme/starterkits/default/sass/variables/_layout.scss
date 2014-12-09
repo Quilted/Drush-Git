@@ -1,0 +1,34 @@
+$mini-width: 340px;
+$narrow-width: 740px;
+$normal-width: 980px;
+$wide-width: 1220px;
+
+$mini: $mini-width, 'no-query' true;
+$narrow: $narrow-width, 'no-query' true;
+$normal: $normal-width, 'no-query' true;
+$wide: $wide-width;
+
+$outside-gutter-spacing: 20px;
+$small-spacing: 10px;
+$medium-spacing: 15px;
+$large-spacing: 30px;
+$x-large-spacing: 45px;
+
+// Configuring Susy Defaults.
+$susy: (
+  global-box-sizing: border-box,
+  use-custom: (rem: true),
+  math: fluid,
+);
+
+$narrow-grid: (
+  container: $narrow-width - ($outside-gutter-spacing * 2),
+);
+
+$normal-grid: (
+  container: $normal-width - ($outside-gutter-spacing * 2),
+);
+
+$wide-grid: (
+  container: $wide-width - ($outside-gutter-spacing * 2),
+);
