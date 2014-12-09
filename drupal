@@ -121,10 +121,14 @@ def install_drupal(install_profile, db_user, db_password, drupal_email)
 end
 
 def create_subtheme(project_machine_name)
+  puts "===> Copying custom themes..."
+  path = "#{ PROJECT_NAME }/www/sites/all/themes"
+  FileUtils.cp_r "#{ SOURCE_PATH }/themes/.", "#{ path }"
+
   puts "===> Creating Omega subtheme..."
   FileUtils.cd "#{ PROJECT_NAME }/www"
   system %{ drush en omega -y; drush cc all }
-  subtheme_command = "drush omega-subtheme #{ project_machine_name }_theme --enable --set-default --with-libraries"
+  subtheme_command = "drush omega-subtheme #{ project_machine_name }_theme --basetheme=quilted_theme --enable --set-default --with-libraries"
   system %{ #{ subtheme_command } }
   FileUtils.cp "#{ SOURCE_PATH }/gitignore_theme.txt", "sites/all/themes/#{ project_machine_name }_theme/.gitignore"
   FileUtils.cd "../.."
