@@ -1,5 +1,13 @@
 $breakpoint-no-queries: true;
 $breakpoint-no-query-fallbacks: true;
 
+// Prevent IE from rendering faux-bold and faux-italic.
+* {
+  font-weight: normal !important;
+  font-style: normal !important;
+}
+
 // Re-render everything from styles.scss but without media queries.
 @import "{{ THEME SANITIZED }}.styles";
+
+@import "ie/ie9";
