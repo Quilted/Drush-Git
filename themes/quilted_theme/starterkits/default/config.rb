@@ -26,7 +26,6 @@ require 'compass-normalize'
 require 'rgbapng'
 require 'toolkit'
 require 'breakpoint'
-require 'singularitygs'
 require 'susy'
 require 'sass-globbing'
 
