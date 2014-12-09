@@ -1,0 +1,50 @@
+@include establish-baseline;
+
+body {
+  // font-family: $gotham-narrow;
+  // color: $black;
+}
+
+h1 {}
+
+h2 {}
+
+h3 {}
+
+h4 {}
+
+h5 {}
+
+h6 {}
+
+p {
+  // margin: 0;
+  // @include margin-trailer(1);
+  // color: $black;
+}
+
+a {
+  &:visited {}
+
+  &:hover,
+  &:focus {}
+
+  &:active,
+  &.active-trail {}
+}
+
+i,
+em {
+  font-style: italic;
+}
+
+b,
+strong {
+  // font-weight: $bold-fw;
+}
+
+em strong,
+strong em {
+  // font-weight: $bold-fw;
+  font-style: italic;
+}
