@@ -44,7 +44,7 @@ projects[] = google_analytics
 ; --------
 projects[] = advanced_help
 projects[] = backup_migrate
-projects[better_exposed_filters][patch][] = https://www.drupal.org/files/issues/better_exposed_filters-links-ajax-1268150-102.patch
+projects[better_exposed_filters][patch][] = https://www.drupal.org/files/issues/better_exposed_filters-links-ajax-1268150-121.patch
 projects[] = better_formats
 projects[] = boxes
 projects[] = context
