@@ -1,8 +1,8 @@
-diff --git better_exposed_filters.js better_exposed_filters.js
-index d818783..48dd3ae 100644
---- better_exposed_filters.js
-+++ better_exposed_filters.js
-@@ -254,6 +254,67 @@
+diff --git a/better_exposed_filters.js b/better_exposed_filters.js
+index 7bfcf66..c285354 100644
+--- a/better_exposed_filters.js
++++ b/better_exposed_filters.js
+@@ -245,6 +245,67 @@
      }
    };
  
@@ -70,11 +70,11 @@ index d818783..48dd3ae 100644
    /*
     * Helper functions
     */
-diff --git better_exposed_filters.theme better_exposed_filters.theme
-index 5966dc3..0e39bb5 100644
---- better_exposed_filters.theme
-+++ better_exposed_filters.theme
-@@ -461,9 +461,9 @@ function theme_select_as_links($vars) {
+diff --git a/better_exposed_filters.theme b/better_exposed_filters.theme
+index d4d3762..b98d193 100644
+--- a/better_exposed_filters.theme
++++ b/better_exposed_filters.theme
+@@ -457,9 +457,9 @@ function theme_select_as_links($vars) {
  
    // Collect selected values so we can properly style the links later.
    $selected_options = array();
@@ -87,7 +87,7 @@ index 5966dc3..0e39bb5 100644
      }
    }
    else {
-@@ -545,26 +545,25 @@ function theme_select_as_links($vars) {
+@@ -541,26 +541,25 @@ function theme_select_as_links($vars) {
          '#type' => 'bef-link',
          '#name' => $id,
        );
@@ -132,7 +132,7 @@ index 5966dc3..0e39bb5 100644
        }
        $output .= $element_output;
  
-@@ -578,14 +577,18 @@ function theme_select_as_links($vars) {
+@@ -574,14 +573,18 @@ function theme_select_as_links($vars) {
  
    $output = '<div class="bef-select-as-links">';
    $output .= theme('form_element', array('element' => $properties));
@@ -153,11 +153,11 @@ index 5966dc3..0e39bb5 100644
      }
    }
    $output .= '</div>';
-diff --git better_exposed_filters_exposed_form_plugin.inc better_exposed_filters_exposed_form_plugin.inc
-index f43bdaa..d932208 100644
---- better_exposed_filters_exposed_form_plugin.inc
-+++ better_exposed_filters_exposed_form_plugin.inc
-@@ -741,6 +741,7 @@ Title Desc|Z -> A</pre> Leave the replacement value blank to remove an option al
+diff --git a/better_exposed_filters_exposed_form_plugin.inc b/better_exposed_filters_exposed_form_plugin.inc
+index c3cb8f4..4811774 100644
+--- a/better_exposed_filters_exposed_form_plugin.inc
++++ b/better_exposed_filters_exposed_form_plugin.inc
+@@ -761,6 +761,7 @@ Title Desc|Z -> A</pre> Leave the replacement value blank to remove an option al
  
            case 'bef_links':
            case 'bef_toggle_links':
@@ -165,7 +165,7 @@ index f43bdaa..d932208 100644
              $form['sort_bef_combine']['#theme'] = 'select_as_links';
  
              // Exposed form displayed as blocks can appear on pages other than
-@@ -842,6 +843,20 @@ Title Desc|Z -> A</pre> Leave the replacement value blank to remove an option al
+@@ -861,6 +862,20 @@ Title Desc|Z -> A</pre> Leave the replacement value blank to remove an option al
          }
        }
      }
@@ -186,7 +186,7 @@ index f43bdaa..d932208 100644
      /* Ends: if (isset($settings['sort'])) { */
  
      /*
-@@ -863,6 +878,7 @@ Title Desc|Z -> A</pre> Leave the replacement value blank to remove an option al
+@@ -882,6 +897,7 @@ Title Desc|Z -> A</pre> Leave the replacement value blank to remove an option al
  
          case 'bef_links':
            if (count($form['items_per_page']['#options']) > 1) {
@@ -194,11 +194,11 @@ index f43bdaa..d932208 100644
              $form['items_per_page']['#theme'] = 'select_as_links';
              $form['items_per_page']['#items_per_page'] = max($form['items_per_page']['#default_value'], key($form['items_per_page']['#options']));
  
-@@ -1152,6 +1168,7 @@ Title Desc|Z -> A</pre> Leave the replacement value blank to remove an option al
+@@ -1172,6 +1188,7 @@ Title Desc|Z -> A</pre> Leave the replacement value blank to remove an option al
  
          case 'bef_links':
            $show_apply = TRUE;
 +          $bef_add_js = TRUE;
-           $form[$field_id]['#theme'] = 'select_as_links';
+           $form[$filter_id]['#theme'] = 'select_as_links';
  
            // Exposed form displayed as blocks can appear on pages other than
